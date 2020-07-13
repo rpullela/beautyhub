@@ -1,0 +1,61 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Box\Box Edit\;C:\Program Files\TortoiseGit\bin;C:\Drive D\apache-maven-3.6.2-bin\apache-maven-3.6.2\bin;C:\Program Files\Java\jdk-11.0.7\bin;C:\Users\risdhing0\AppData\Local\Microsoft\WindowsApps;C:\Users\risdhing0\AppData\Local\Programs\Git\cmd;C:\Users\risdhing0\AppData\Local\GitHubDesktop\bin;C:\Users\risdhing0\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risdhing0\AppData\Roaming\npm;C:\docker\dist;c:\docker\dist;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Amazon\AWSCLI\bin\;C:\Program Files (x86)\Yarn\bin\;C:\Users\risdhing0\Anaconda3\Scripts;C:\Users\risdhing0\AppData\Local\Microsoft\WindowsApps;C:\Users\risdhing0\AppData\Local\Programs\Git\cmd;C:\Users\risdhing0\AppData\Local\GitHubDesktop\bin;C:\Users\risdhing0\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risdhing0\AppData\Roaming\npm;C:\Users\risdhing0\AppData\Local\Yarn\bin;C:\Users\risdhing0\Anaconda3\Scripts;
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.14.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.0.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141375:19)
+      at Object.onceWrapper (events.js:312:28)
+      at ClientRequest.emit (events.js:223:5)
+      at TLSSocket.emitRequestTimeout (_http_client.js:690:9)
+      at Object.onceWrapper (events.js:312:28)
+      at TLSSocket.emit (events.js:223:5)
+      at TLSSocket.Socket._onTimeout (net.js:474:8)
+      at listOnTimeout (internal/timers.js:531:17)
+      at processTimers (internal/timers.js:475:7)
+
+npm manifest: 
+  {
+    "private": true,
+    "name": "sanity-gatsby-blog",
+    "version": "1.0.13",
+    "workspaces": [
+      "packages/*"
+    ],
+    "scripts": {
+      "build-studio": "lerna bootstrap && cd packages/studio && yarn run build",
+      "build-web": "lerna bootstrap && (cd packages/studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN yarn run graphql-deploy) && (cd packages/web && yarn run build)",
+      "graphql-deploy": "lerna run graphql-deploy",
+      "format": "lerna run format",
+      "lint": "lerna run lint",
+      "postinstall": "lerna bootstrap",
+      "report:merge": "mochawesome-merge cypress/results/*.json > index.json",
+      "report:generate": "marge index.json --reportDir public --assetsDir public/videos --reportPageTitle index.html"
+    },
+    "devDependencies": {
+      "@sanity/cli": "^1.149.9",
+      "lerna": "^3.13.1",
+      "cypress-multi-reporters": "^1.4.0",
+      "mocha": "^8.0.1",
+      "mochawesome": "^6.1.1",
+      "mochawesome-merge": "^4.1.0",
+      "mochawesome-report-generator": "^5.1.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

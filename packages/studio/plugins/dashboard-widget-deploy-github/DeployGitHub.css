@@ -1,0 +1,44 @@
+.container {
+  background-color: #fff;
+}
+.header {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(23, 23, 23, 0.1);
+}
+.header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  line-height: 1.1em;
+}
+.button {
+  margin: 1.2rem 0 0.5rem 1.3rem;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+.button:hover {
+  background: #eee;
+}
+.mid_container{
+  padding: .5rem 1rem;
+}
+.list{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+
+}
+.list figure,
+.list button{
+  margin:0
+}
+.link {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: #eeeeee;
+}

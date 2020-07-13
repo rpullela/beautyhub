@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "sanity-gatsby-blog",
+  "version": "1.0.13",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build-studio": "lerna bootstrap && cd packages/studio && yarn run build",
+    "build-web": "lerna bootstrap && (cd packages/studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN yarn run graphql-deploy) && (cd packages/web && yarn run build)",
+    "graphql-deploy": "lerna run graphql-deploy",
+    "format": "lerna run format",
+    "lint": "lerna run lint",
+    "postinstall": "lerna bootstrap",
+    "report:merge": "mochawesome-merge cypress/results/*.json > index.json",
+    "report:generate": "marge index.json --reportDir public --assetsDir public/videos --reportPageTitle index.html"
+  },
+  "devDependencies": {
+    "@sanity/cli": "^1.149.9",
+    "lerna": "^3.13.1",
+    "cypress-multi-reporters": "^1.4.0",
+    "mocha": "^8.0.1",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0",
+    "mochawesome-report-generator": "^5.1.0"
+  }
+}

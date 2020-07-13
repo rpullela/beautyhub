@@ -1,0 +1,5 @@
+{
+  "integrationFolder": ".",
+  "baseUrl": "${base.url}",
+  "video": false
+}

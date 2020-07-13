@@ -1,0 +1,95 @@
+@font-face {
+  font-family: Proxima Nova Alt;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('/fonts/ProximaNovaAltRegular.woff2') format('woff2');
+}
+@font-face {
+  font-family: Proxima Nova Alt;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url('/fonts/ProximaNovaAltBold.woff2') format('woff2');
+}
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+}
+iframe {
+  width: 100%;
+}
+.img-responsive {
+  width: 100%;
+  display: block;
+  max-width: 100%;
+}
+button:focus,
+a:focus {
+  outline: 2px dashed #b8f0c0;
+}
+figure {
+  margin: 0;
+}
+figure picture {
+  display: block;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.bp-image__placeholder {
+  position: relative;
+}
+.bp-image__placeholder img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.srOnly {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  height: 0.0625rem;
+  margin: -0.0625rem;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 0.0625rem;
+  white-space: nowrap;
+}
+/* Responsive Container / GRID */
+
+.container {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.pad0 {
+  padding: 0;
+}
