@@ -39,3 +39,9 @@ ALGOLIA_SEARCH_API_KEY=<<value>>
 5. graphql-deploy: `yarn workspace studio graphql-deploy`
 
 you can find more about specific commands inside package.json of studio or web folder or located at the root for combined actions.
+
+## Authorize LightHouse Plugin with Github for PR Comments with Lighthouse Results:
+1. Navigate to https://github.com/apps/lighthouse-ci and click on install 
+2. Authorise (Need organisation admin access to add to organisation repo)
+3. Copy the LHCI_GITHUB_APP_TOKEN token on Authorisation page
+4. Add this Token to GitHub Secrets.
