@@ -87,16 +87,16 @@ module.exports = ({ themeConfig }) => {
       resolve: `gatsby-plugin-netlify`,
       options: netlifyOptions,
     },
-    {
-      resolve: 'gatsby-plugin-algolia',
-      options: {
-        appId: siteMetadata.algoliaAppID,
-        apiKey: siteMetadata.algoliaAdminApiKey,
-        queries,
-        enablePartialUpdates: true,
-        chunkSize: 10000,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-algolia',
+    //   options: {
+    //     appId: siteMetadata.algoliaAppID,
+    //     apiKey: siteMetadata.algoliaAdminApiKey,
+    //     queries,
+    //     enablePartialUpdates: true,
+    //     chunkSize: 10000,
+    //   },
+    // },
     'gatsby-plugin-sitemap',
   ];
   plugins.push(sanitySourcePlugin);
