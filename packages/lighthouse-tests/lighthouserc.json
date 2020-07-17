@@ -2,9 +2,9 @@
 	"ci": {
 		"collect": {
 			"url": [
-				"http://localhost/hair-style/how-to-style-baby-bangs-100-chic-for-a-night-out/",
+				"http://localhost/",
 				"http://localhost/search-results/",
-				"http://localhost/hair-style/20-best-box-braids-bob-styles-to-try-in-2020/"
+				"http://localhost/hair-style/how-to-do-a-dutch-braid-in-six-easy-steps/"
 			],
 			"staticDistDir": "packages/web/public"
 		},
