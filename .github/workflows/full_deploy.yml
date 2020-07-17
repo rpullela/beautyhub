@@ -47,7 +47,7 @@ jobs:
       - name: install Lighhouse CLI
         run: npm install -g @lhci/cli@0.4.x
       - name: Run Lighthouse Tests
-        run: lhci autorun --config=packages/lighthouse-tests/lighthouserc.json      --githubToken= ${{ secrets.LHCI_GITHUB_APP_TOKEN }}      
+        run: lhci autorun --config=packages/lighthouse-tests/lighthouserc.json --githubToken= ${{ secrets.LHCI_GITHUB_APP_TOKEN }}      
         env:
             LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}       
       - name: Deploy Web to Netlify      
