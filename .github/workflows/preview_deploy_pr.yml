@@ -81,20 +81,24 @@ jobs:
        steps:
            - name: Checkout code
              uses: actions/checkout@v1
+             with:
+              ref: ${{ github.event.pull_request.head.sha }}
            - run: mkdir -p packages/web/public
            - name: Download Public Directory
              uses: actions/download-artifact@v1            
              with:
               name: public
               path: packages/web/public
-           - uses: treosh/lighthouse-ci-action@v2
-             id: lhci
+           - name: Use Node.js 12.x
+             uses: actions/setup-node@v1
              with:
-              configPath: "packages/lighthouse-tests/lighthouserc.json"
-              temporaryPublicStorage: true
-              uploadArtifacts: true  
+              node-version: 12.x
+           - name: install Lighhouse CLI
+             run: npm install -g @lhci/cli@0.4.x
+           - name: Run Lighthouse using configuration
+             run: lhci autorun --config=packages/lighthouse-tests/lighthouserc.json --githubToken= ${{ secrets.LHCI_GITHUB_APP_TOKEN }}      
              env:
-               LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}      
+              LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
     sdtt:
       runs-on: ubuntu-latest
       name: Run Structured Data Tests
@@ -109,7 +113,7 @@ jobs:
           - name: Run Structured Data Test
             run: |
                  npm i structured-data-testing-tool -g
-                 sdtt --url  ${{ needs.deploy_preview.outputs.url }}/hair-style/how-to-do-a-dutch-braid-in-six-easy-steps/ --schemas "jsonld:Article" -p Twitter -p Facebook --presets SocialMedia -i > output/sdt-pr-${{ github.event.number }}.txt
+                 sdtt --url  ${{ needs.deploy_preview.outputs.url }} --schemas "jsonld:Article" -p Twitter -p Facebook --presets SocialMedia -i > output/stt-pr-${{ github.event.number }}.txt
           -  if: ${{ always() }}      
              uses: actions/upload-artifact@v1
              with: 
@@ -134,7 +138,7 @@ jobs:
              env:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
              with:
-               msg: "Structured Data Test Results has been deployed for Pull Request on: ${{secrets.REPO_DEPLOY_URL }}/sdt-pr-${{ github.event.number }}.txt"
+               msg: "Strcuture Data Test Results deployed on ${{secrets.REPO_DEPLOY_URL }}/stt-pr-${{ github.event.number }}.txt"
     cypress:
       runs-on: ubuntu-latest
       name: Run e2e Cypress Tests
@@ -176,7 +180,7 @@ jobs:
           - name: Copy PR Specific File
             if: always()
             run: |
-                mv public/index.html public/cypress-pr-${{ github.event.number }}.html   
+                mv public/index.html public/index-pr-${{ github.event.number }}.html   
           - name: Deploy report page
             if: always()
             uses: peaceiris/actions-gh-pages@v3
@@ -203,7 +207,7 @@ jobs:
             env:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             with:
-               msg: "Cypress Test Results has been deployed for Pull Request on: ${{secrets.REPO_DEPLOY_URL }}/index-pr-${{ github.event.number }}.html"  
+               msg: "Cypress Test Results deployed on ${{secrets.REPO_DEPLOY_URL }}/index-pr-${{ github.event.number }}.html"  
     pa11y:
       runs-on: ubuntu-latest
       name: Run Accessility Tests using pa11y  
@@ -222,7 +226,7 @@ jobs:
                  pa11y-ci --sitemap https://liberty-portal.netlify.app/sitemap.xml --sitemap-find https://liberty-portal.netlify.app --sitemap-replace  ${{ needs.deploy_preview.outputs.url }} --json  > pa11y-ci-results.json
           -  if: ${{ always() }}
              name: Generate HTML for pa11y report
-             run: pa11y-ci-reporter-html -s pa11y-ci-results.json -d output/pa11y-pr-${{ github.event.number }}
+             run: pa11y-ci-reporter-html -s pa11y-ci-results.json -d output/pa11y-pr-${{ github.event.number }}.html
           -  if: ${{ always() }} 
              uses: actions/upload-artifact@v1
              with: 
@@ -238,7 +242,7 @@ jobs:
             env:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             with:
-               msg: "pa11y Test Results has been deployed for Pull Request on: ${{secrets.REPO_DEPLOY_URL }}/pa11y-pr-${{ github.event.number }}" 
+               msg: "pa11y Test Results deployed on ${{secrets.REPO_DEPLOY_URL }}/pa11y-pr-${{ github.event.number }}.html" 
           - name: Deploy report page
             if: always()
             uses: peaceiris/actions-gh-pages@v3
