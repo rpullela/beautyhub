@@ -79,7 +79,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       backgroundColor: palette.common.white,
       width: '100vw',
       boxShadow: '0 0 10px 4px rgba(0,0,0,.1)',
-      height: 0,
+      height: '0.1%',
       transition: 'height 0.3s ease-in-out',
       overflow: 'hidden',
       display: 'flex',

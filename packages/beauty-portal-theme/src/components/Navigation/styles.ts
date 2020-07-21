@@ -88,7 +88,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       bottom: 0,
       background: palette.common.black,
       zIndex: 1,
-      height: 0,
+      height: '0.1%',
       transition: 'height .3s ease-in-out',
       [breakpoints.up('md')]: {
         display: 'block',
@@ -188,14 +188,14 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     subNavigation: {
       overflow: 'hidden',
       transition: 'height .3s ease-in-out',
-      height: 0,
+      height: '0.1%',
 
       [breakpoints.up('md')]: {
         position: 'absolute',
         top: '100%',
         left: 0,
         overflow: 'auto',
-        height: 0,
+        height: '0.1%',
         background: palette.common.black,
         minWidth: '200px',
         '&:focus-within': {
