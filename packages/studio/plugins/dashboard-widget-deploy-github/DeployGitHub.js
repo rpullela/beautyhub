@@ -27,7 +27,7 @@ const DeployGitHub = () => {
     setDeployingStudio(true)
     setDisableStudio(true)
     fetch(
-      'WEBHOOK_URL',
+      'https://c2je1jc4ub.execute-api.eu-central-1.amazonaws.com/beta/stackbot/add-webhook/013863c7-2e5f-46f9-adc7-293dc069035c/jball/beautyhub',
       {
         method: 'POST',
         body: JSON.stringify({event_type: 'studio-build-deploy'}),
@@ -44,7 +44,7 @@ const DeployGitHub = () => {
     setDeployingWeb(true)
     setDisableWeb(true)
     fetch(
-      'WEBHOOK_URL',
+      'https://c2je1jc4ub.execute-api.eu-central-1.amazonaws.com/beta/stackbot/add-webhook/013863c7-2e5f-46f9-adc7-293dc069035c/jball/beautyhub',
       {
         method: 'POST',
         body: JSON.stringify({event_type: 'web-build-deploy'}),
@@ -73,7 +73,7 @@ const DeployGitHub = () => {
             <figure>
               <img src="../../static/badge-studio.svg" />
               <figcaption>
-                <a href="STUDIO_ACTION_URL">View Studio Deployment</a>
+                <a href="https://github.com/jball/beautyhub/actions?query=workflow%3A%22Studio+%7C+Build+and+Deploy%22">View Studio Deployment</a>
               </figcaption>
             </figure>
             <button
@@ -90,7 +90,7 @@ const DeployGitHub = () => {
             <figure>
               <img src="../../static/badge.svg" />
               <figcaption>
-                <a href="WEB_ACTION_URL">View Web Deployment</a>
+                <a href="https://github.com/jball/beautyhub/actions?query=workflow%3A%22Web+%7C+Build+and+Deploy%22">View Web Deployment</a>
               </figcaption>
             </figure>
             <div>
