@@ -29,6 +29,11 @@ const Header: FunctionComponent = () => {
             </Link>
           </div>
           <SiteNavigation />
+          <div className={classes.siteLogin}>
+            <Link to="/login" className={classes.searchButton}>
+              Login
+            </Link>
+          </div>
           <NewsletterFollow
             label={'Subscribe to our newsletter'}
             links={data.brandInfo}

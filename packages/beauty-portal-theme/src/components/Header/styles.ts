@@ -157,6 +157,23 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         paddingRight: spacing(2.5),
       },
     },
+    siteLogin: {
+      position: 'absolute',
+      right: 140,
+      color: palette.common.white,
+      display: 'flex',
+      alignItems: 'center',
+      fontSize: '.875rem',
+      fontWeight: 700,
+      lineHeight: 1.6,
+      [breakpoints.up('md')]: {
+        fontSize: '1.125rem',
+      },
+      '& svg': {
+        marginLeft: spacing(0.5),
+        fill: palette.secondary.main,
+      },
+    },
     siteSearch: {
       position: 'absolute',
       right: 60,
@@ -168,6 +185,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       },
     },
     searchButton: {
+      color: palette.common.white,
       backgroundColor: 'transparent',
       border: 'none',
       cursor: 'pointer',
