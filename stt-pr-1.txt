@@ -1,0 +1,165 @@
+Tests
+
+  Metatags 
+    •  x-ua-compatible
+        └─ ie=edge
+    •  viewport
+        └─ width=device-width, initial-scale=1, shrink-to-fit=no
+    •  generator
+        └─ Gatsby 2.24.2
+    •  description
+        └─ Beauty Portal was created from a sample site on Platform Liberty [Please rewire me out of Blog Settings]
+    •  og:description
+        └─ Beauty Portal was created from a sample site on Platform Liberty [Please rewire me out of Blog Settings]
+    •  twitter:card
+        └─ summary
+    •  twitter:creator
+        └─ beauty-portal
+    •  twitter:title
+        └─ Home Page
+    •  twitter:description
+        └─ Beauty Portal was created from a sample site on Platform Liberty [Please rewire me out of Blog Settings]
+    •  og:type
+        └─ page
+    •  og:url
+        └─ https://liberty-portal.netlify.app///
+    •  og:title
+        └─ All Things Beautiful
+    •  og:site_name
+        └─ All Things Beautiful
+    •  twitter:site
+        └─ All Things Beautiful
+    •  og:locale
+        └─ EN-GB
+
+  Schema.org > WebSite - 100% (1 passed, 0 failed)
+    ✓  schema in jsonld
+        └─ [Object]
+    •  @context
+        └─ http://schema.org
+    •  @type
+        └─ WebSite
+    •  mainEntityOfPage.@type
+        └─ WebPage
+    •  mainEntityOfPage.@id
+        └─ https://liberty-portal.netlify.app/
+    •  inLanguage
+        └─ EN-GB
+    •  publisher.@type
+        └─ Organization
+    •  publisher.name
+        └─ All Things Beautiful
+    •  publisher.url
+        └─ https://www.allthingsbeautiful.com/
+    •  publisher.sameAs[0]
+        └─ https://www.youtube.com/user/allthingshairPH
+    •  publisher.sameAs[1]
+        └─ https://twitter.com/AllThingsHairuk
+    •  publisher.sameAs[2]
+        └─ https://www.pinterest.com/AllThingsHair/
+    •  publisher.sameAs[3]
+        └─ https://www.facebook.com/AllThingsHairPH/
+    •  publisher.sameAs[4]
+        └─ https://www.instagram.com/allthingshairuk/
+    •  publisher.logo.@type
+        └─ ImageObject
+    •  publisher.logo.url
+        └─ https://liberty-portal.netlify.app/unilever-logo.png
+    •  name
+        └─ All Things Beautiful
+
+  Schema.org > WebPage - 100% (1 passed, 0 failed)
+    ✓  schema in jsonld
+        └─ [Object]
+    •  @context
+        └─ http://schema.org
+    •  @type
+        └─ WebPage
+    •  mainEntityOfPage.@type
+        └─ WebPage
+    •  mainEntityOfPage.@id
+        └─ https://liberty-portal.netlify.app///
+    •  inLanguage
+        └─ EN-GB
+    •  publisher.@type
+        └─ Organization
+    •  publisher.name
+        └─ All Things Beautiful
+    •  publisher.url
+        └─ https://www.allthingsbeautiful.com/
+    •  publisher.sameAs[0]
+        └─ https://www.youtube.com/user/allthingshairPH
+    •  publisher.sameAs[1]
+        └─ https://twitter.com/AllThingsHairuk
+    •  publisher.sameAs[2]
+        └─ https://www.pinterest.com/AllThingsHair/
+    •  publisher.sameAs[3]
+        └─ https://www.facebook.com/AllThingsHairPH/
+    •  publisher.sameAs[4]
+        └─ https://www.instagram.com/allthingshairuk/
+    •  publisher.logo.@type
+        └─ ImageObject
+    •  publisher.logo.url
+        └─ https://liberty-portal.netlify.app/unilever-logo.png
+    •  name
+        └─ Home Page
+    •  description
+        └─ Home Page
+
+  Schema.org > Article - 0% (0 passed, 1 failed)
+    ✕  schema in jsonld [Article[*]]
+        └─  NOT_FOUND
+
+  Facebook - 75% (6 passed, 2 failed)
+    ✓  must have page title
+        └─ All Things Beautiful
+    ✓  must have page type
+        └─ page
+    ✓  must have url
+        └─ https://liberty-portal.netlify.app///
+    ✓  should have page description
+        └─ Beauty Portal was created from a sample site on Platform Liberty [Please rewire me out of Blog Settings]
+    ✓  should have account username
+        └─ All Things Beautiful
+    ✓  should have locale
+        └─ EN-GB
+    ✕  must have image url ["og:image" || "og:image:src"]
+        └─  NOT_FOUND
+    ✕  must have image alt text ["og:image:alt"]
+        └─  NOT_FOUND
+
+  Twitter - 71% (5 passed, 2 failed)
+    ✓  must have card type
+        └─ summary
+    ✓  must have title
+        └─ Home Page
+    ✓  must have description
+        └─ Beauty Portal was created from a sample site on Platform Liberty [Please rewire me out of Blog Settings]
+    ✓  should have account username
+        └─ All Things Beautiful
+    ✓  should have username of content creator
+        └─ beauty-portal
+    ✕  must have image url ["twitter:image" || "twitter:image:src"]
+        └─  NOT_FOUND
+    ✕  must have image alt text ["twitter:image:alt"]
+        └─  NOT_FOUND
+
+Statistics
+
+  Number of Metatags: 16
+  Schemas in JSON-LD: 2
+     Schemas in HTML: 0
+      Schema in RDFa: 0
+  Schema.org schemas: WebSite, WebPage
+       Other schemas: 0
+     Test groups run: 6
+  Optional tests run: 48
+ Pass/Fail tests run: 18
+
+Results
+
+    Passed: 13 	(72%)
+  Warnings: 0 	(0%)
+    Failed: 5 	(27%)
+
+
