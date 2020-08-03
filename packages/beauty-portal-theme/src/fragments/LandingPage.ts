@@ -220,6 +220,15 @@ export const query = graphql`
           name
         }
       }
+      ... on SanityAuthenticationBlock {
+        id
+        name
+        ctaLabel
+        type {
+          name
+          description
+        }
+      }
     }
   }
 `;

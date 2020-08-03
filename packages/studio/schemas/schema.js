@@ -5,6 +5,8 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // document schemas
+import authenticationBlock from './documents/authenticationBlock'
+import authenticationBlockType from './documents/authenticationBlockType'
 import author from './documents/author'
 import config from './documents/config'
 import tool from './documents/tool'
@@ -86,6 +88,8 @@ export default createSchema({
     product,
     productSlider,
     sliderType,
+    authenticationBlock,
+    authenticationBlockType,
     imageBlockType,
     imageBlock,
     textBlockType,

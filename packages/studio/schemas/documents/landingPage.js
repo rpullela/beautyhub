@@ -1,4 +1,4 @@
-import {MdWeb} from 'react-icons/md'
+import { MdWeb } from 'react-icons/md'
 
 export default {
   name: 'landingPage',
@@ -35,12 +35,13 @@ export default {
           title: 'Add any sliders or blocks',
           type: 'reference',
           to: [
-            {type: 'articleSlider'},
-            {type: 'productSlider'},
-            {type: 'textBlock'},
-            {type: 'imageBlock'},
-            {type: 'videoBlock'},
-            {type: 'newsletterBlock'}
+            { type: 'articleSlider' },
+            { type: 'productSlider' },
+            { type: 'textBlock' },
+            { type: 'imageBlock' },
+            { type: 'videoBlock' },
+            { type: 'newsletterBlock' },
+            { type: 'authenticationBlock' }
           ]
         }
       ]

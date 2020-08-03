@@ -8,7 +8,8 @@ import {
   MdImage,
   MdTextFields,
   MdViewCompact,
-  MdEmail
+  MdEmail,
+  MdLock
 } from 'react-icons/md'
 import { FaSitemap, FaTag, FaTags, FaBuffer, FaSlidersH, FaBoxes, FaGlobe } from 'react-icons/fa'
 import { GiSpray, GiCherish, GiHairStrands, GiStopSign } from 'react-icons/gi'
@@ -143,7 +144,13 @@ export default () =>
                 .title('Newsletter Block')
                 .icon(MdEmail)
                 .schemaType('newsletterBlock')
-                .child(S.documentTypeList('newsletterBlock').title('Newsletter Block'))
+                .child(S.documentTypeList('newsletterBlock').title('Newsletter Block')),
+              S.divider(),
+              S.listItem()
+                .title('Authentication Block')
+                .icon(MdLock)
+                .schemaType('authenticationBlock')
+                .child(S.documentTypeList('authenticationBlock').title('Authentication Block')),
             ])
         ),
       S.listItem()
@@ -289,7 +296,12 @@ export default () =>
                         .schemaType('newsletterBlockType')
                         .child(
                           S.documentTypeList('newsletterBlockType').title('Newsletter Block Type')
-                        )
+                        ),
+                      S.listItem()
+                        .title('Authentication Block Type')
+                        .icon(MdLock)
+                        .schemaType('authenticationBlockType')
+                        .child(S.documentTypeList('authenticationBlockType').title('Authentication Block Type')),
                     ])
                 )
             ])
