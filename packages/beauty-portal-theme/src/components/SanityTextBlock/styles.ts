@@ -5,10 +5,10 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     section: {
       paddingBottom: spacing(2),
       paddingTop: spacing(2),
-      backgroundColor: palette.quaternary.main,
+      backgroundColor: palette.background.default,
       [breakpoints.up('md')]: {
-        paddingBottom: spacing(5),
-        paddingTop: spacing(5),
+        paddingBottom: spacing(3),
+        paddingTop: spacing(3),
       },
       '& h1': {
         fontSize: '1.875rem',
@@ -29,11 +29,12 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       },
     },
     sectionDescription: {
-      textAlign: 'center',
+      textAlign: 'left',
       margin: 'auto',
       color: palette.grey[50],
       '& p': {
         fontSize: '.875rem',
+        lineHeight: '2.5rem',
         margin: 0,
         [breakpoints.up('md')]: {
           fontSize: '1.125rem',
@@ -44,6 +45,10 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       },
       '& h2': {
         fontSize: '1.5rem',
+        letterSpacing: '2px',
+        lineHeight: '2rem',
+        marginBlockStart: '0.4em',
+        marginBlockEnd: '0.4em',
       },
       '& blockquote': {
         position: 'relative',
@@ -88,6 +93,50 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
           height: 2,
           backgroundColor: palette.primary.main,
           zIndex: 0,
+        },
+      },
+    },
+    alignLink: {
+      textAlign: 'center',
+      marginTop: '10px',
+    },
+    jumpIn: {
+      fontSize: '1.2rem',
+      fontWeight: 700,
+      width: 160,
+      height: 50,
+      cursor: 'pointer',
+      borderRadius: '25px',
+      backgroundColor: palette.primary.main,
+      color: palette.common.black,
+      textTransform: 'uppercase',
+      position: 'relative',
+      transform: 'perspective(1px) translateZ(0)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+
+      margin: 'auto',
+      '&:before': {
+        content: '""',
+        position: 'absolute',
+        zIndex: -1,
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: palette.common.black,
+        borderRadius: '25px',
+        transform: 'scaleX(0)',
+        transformOrigin: '0 50%',
+        transitionProperty: 'transform',
+        transitionDuration: '0.3s',
+        transitionTimingFunction: 'ease-out',
+      },
+      '&:hover': {
+        color: palette.common.white,
+        '&:before': {
+          transform: 'scaleX(1)',
         },
       },
     },

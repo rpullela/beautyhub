@@ -10,7 +10,7 @@
   font-style: normal;
   font-display: swap;
   font-weight: 600;
-  src: url('/fonts/ProximaNovaAltBold.woff2') format('woff2');
+  src: url('/fonts/Ubuntu-Bold.ttf') format('woff2');
 }
 * {
   box-sizing: border-box;
@@ -79,8 +79,8 @@ figure img {
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 @media (min-width: 1280px) {
   .container {
