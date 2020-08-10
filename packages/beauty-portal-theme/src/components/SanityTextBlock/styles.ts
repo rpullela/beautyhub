@@ -41,7 +41,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         },
       },
       '& h1, & h2, & h3, & h4, & h5, & h6': {
-        color: palette.common.black,
+        color: palette.primary.main,
       },
       '& h2': {
         fontSize: '1.5rem',
@@ -65,7 +65,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
           '& span': {
             '&:last-child': {
               fontSize: '1rem',
-              color: palette.common.black,
+              color: palette.grey[50],
             },
           },
         },
