@@ -1,4 +1,4 @@
-import {FaSlidersH} from 'react-icons/fa'
+import { FaSlidersH } from 'react-icons/fa'
 
 export default {
   name: 'productSlider',
@@ -36,7 +36,7 @@ export default {
       of: [
         {
           type: 'reference',
-          to: [{type: 'product'}]
+          to: [{ type: 'product' }]
         }
       ]
     },
@@ -44,7 +44,7 @@ export default {
       name: 'searchCtaLabel',
       type: 'string',
       title: 'Search CTA Label',
-      description: 'For example: See All, or leave blank'
+      description: 'For example: View All, or leave blank'
     },
     {
       name: 'searchTags',

@@ -20,7 +20,7 @@ export default {
       description: 'Headline will be displayed on website'
     },
     {
-      name: 'Description',
+      name: 'description',
       type: 'textBlockPortableText',
       description: 'Text will appear under Headline'
     },
@@ -49,7 +49,7 @@ export default {
       name: 'searchCtaLabel',
       type: 'string',
       title: 'Search CTA Label',
-      description: 'For example: See All, or leave blank'
+      description: 'For example: View All, or leave blank'
     },
     {
       name: 'searchTags',

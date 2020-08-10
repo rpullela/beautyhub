@@ -60,9 +60,6 @@ const Slider: FunctionComponent<SliderInterface> = ({
     return (
       <SwiperSlide key={slide.headline}>
         <div>
-          {slide._type && (
-            <span className={classes.tileSlideType}>{slide._type}</span>
-          )}
           <Link className={classes.sliderLink} to={slide.path}>
             <div className={classes.heroImage}>
               <figure>
@@ -106,6 +103,7 @@ const Slider: FunctionComponent<SliderInterface> = ({
                   </picture>
                 ) : null}
               </figure>
+              {slide.A}
               {slide.heroVideo && (
                 <span className={`icon ${classes.iconPlay}`}>
                   <PlayVideo />
@@ -113,10 +111,11 @@ const Slider: FunctionComponent<SliderInterface> = ({
                 </span>
               )}
             </div>
-            <div>Read more</div>
-            <h3 className={classes.sliderItemCaption}>
-              <span>{slide.headline}</span>
-            </h3>
+            <div className={classes.tileCard}>
+              <h3 className={classes.sliderItemCaption}>
+                <span>{slide.headline}</span>
+              </h3>
+            </div>
           </Link>
         </div>
       </SwiperSlide>

@@ -214,6 +214,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     heroImage: {
       position: 'relative',
       overflow: 'hidden',
+      border: '1px solid grey',
       '& picture img': {
         transition: 'all .8s ease-out 0s !important',
       },
@@ -263,7 +264,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     },
     sliderItemCaption: {
       fontSize: '.875rem',
-      fontWeight: 600,
+      fontWeight: 400,
       color: palette.common.black,
       marginTop: spacing(0.625),
       marginBottom: spacing(0.625),
@@ -308,6 +309,12 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       [breakpoints.up('md')]: {
         paddingBottom: 0,
       },
+    },
+    tileCard: {
+      border: '1px solid grey',
+      borderTop: 'none',
+      padding: '0.5rem',
+      height: '4.5em',
     },
   })
 );
