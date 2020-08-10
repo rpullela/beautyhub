@@ -47,6 +47,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         fontSize: '1.5rem',
         letterSpacing: '2px',
         lineHeight: '2rem',
+        fontWeight: '700',
         marginBlockStart: '0.4em',
         marginBlockEnd: '0.4em',
       },
