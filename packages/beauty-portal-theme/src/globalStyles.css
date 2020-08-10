@@ -6,11 +6,11 @@
   src: url('/fonts/ProximaNovaAltRegular.woff2') format('woff2');
 }
 @font-face {
-  font-family: Ubuntu;
-  font-style: bold;
+  font-family: Proxima Nova Alt;
+  font-style: normal;
   font-display: swap;
   font-weight: 600;
-  src: url('/fonts/Ubuntu-Bold') format('woff2');
+  src: url('/fonts/ProximaNovaAltBold.woff2') format('woff2');
 }
 * {
   box-sizing: border-box;
