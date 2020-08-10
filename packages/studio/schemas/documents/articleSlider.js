@@ -1,4 +1,4 @@
-import {FaSlidersH} from 'react-icons/fa'
+import { FaSlidersH } from 'react-icons/fa'
 
 export default {
   name: 'articleSlider',
@@ -20,6 +20,11 @@ export default {
       description: 'Headline will be displayed on website'
     },
     {
+      name: 'Description',
+      type: 'textBlockPortableText',
+      description: 'Text will appear under Headline'
+    },
+    {
       name: 'slideType',
       title: 'Slide Type',
       type: 'reference',
@@ -36,7 +41,7 @@ export default {
       of: [
         {
           type: 'reference',
-          to: [{type: 'howToArticle'}, {type: 'featureArticle'}, {type: 'galleryArticle'}]
+          to: [{ type: 'howToArticle' }, { type: 'featureArticle' }, { type: 'galleryArticle' }]
         }
       ]
     },

@@ -113,6 +113,7 @@ const Slider: FunctionComponent<SliderInterface> = ({
                 </span>
               )}
             </div>
+            <div>Read more</div>
             <h3 className={classes.sliderItemCaption}>
               <span>{slide.headline}</span>
             </h3>

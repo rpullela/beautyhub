@@ -15,12 +15,12 @@ const ArticleTileSlider: FunctionComponent<ArticleTileSliderInterface> = ({
   const breakpoints = {
     breakpoints: {
       768: {
-        slidesPerView: 4,
-        spaceBetween: 30,
+        slidesPerView: 3,
+        spaceBetween: 70,
       },
       320: {
-        slidesPerView: 2.5,
-        spaceBetween: 20,
+        slidesPerView: 2.1,
+        spaceBetween: 50,
       },
     },
   };
@@ -42,7 +42,7 @@ const ArticleTileSlider: FunctionComponent<ArticleTileSliderInterface> = ({
         type="tile"
         slides={slides}
         spaceBetween={30}
-        slidesPerView={4}
+        slidesPerView={3}
         speed={700}
         threshold={5}
         lazy={true}
