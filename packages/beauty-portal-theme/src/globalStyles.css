@@ -3,14 +3,14 @@
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: url('/fonts/Ubuntu-Regular.ttf') format('woff2');
+  src: url('/fonts/ProximaNovaAltRegular.woff2') format('woff2');
 }
 @font-face {
-  font-family: Ubuntu;
-  font-style: bold;
+  font-family: Proxima Nova Alt;
+  font-style: normal;
   font-display: swap;
-  font-weight: 700;
-  src: url('/fonts/Ubuntu-Bold.ttf') format('woff2');
+  font-weight: 600;
+  src: url('/fonts/ProximaNovaAltBold.woff2') format('woff2');
 }
 * {
   box-sizing: border-box;
@@ -26,9 +26,6 @@ h4,
 h5,
 h6 {
   line-height: 1.1;
-}
-p {
-  color: grey;
 }
 iframe {
   width: 100%;
@@ -82,8 +79,8 @@ figure img {
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 @media (min-width: 1280px) {
   .container {
