@@ -9,6 +9,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       position: 'relative',
       marginLeft: spacing(4),
       marginRight: spacing(4),
+
       [breakpoints.up('md')]: {
         paddingTop: spacing(5),
         paddingBottom: spacing(5),
@@ -22,15 +23,6 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       },
       '& .swiper-scrollbar-drag': {
         backgroundColor: palette.grey[20],
-      },
-      '& .swiper-container-horizontal > .swiper-scrollbar': {
-        width: '100%',
-        bottom: 0,
-        height: 5,
-        left: 0,
-        [breakpoints.up('md')]: {
-          height: 10,
-        },
       },
       '& h4': {
         letterSpacing: '2px',

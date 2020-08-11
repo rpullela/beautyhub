@@ -286,9 +286,10 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       paddingBottom: '3px',
       paddingLeft: spacing(1),
       paddingRight: spacing(1),
-      opacity: '0.5',
+      opacity: '0.75',
       backgroundColor: palette.grey[50],
       color: 'white',
+      marginTop: '-30px',
     },
   })
 );
