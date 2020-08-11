@@ -81,12 +81,13 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       whiteSpace: 'nowrap',
     },
     navigation: {
+      marginTop: '20px',
       position: 'fixed',
       top: '60px',
       left: 0,
       right: 0,
       bottom: 0,
-      background: palette.common.black,
+      background: palette.grey[50],
       zIndex: 1,
       height: '0.1%',
       transition: 'height .3s ease-in-out',
@@ -126,9 +127,9 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     },
     navigationListItem: {
       position: 'relative',
-      '&:hover > a, &:focus-within': {
-        backgroundColor: palette.primary.main,
-      },
+      // '&:hover > a, &:focus-within': {
+      //   backgroundColor: palette.primary.main,
+      // },
       '&:hover > div': {
         height: 'auto',
       },
@@ -159,9 +160,9 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         display: 'flex',
         alignItems: 'center',
         height: '59px',
-        '&:hover, &:focus': {
-          backgroundColor: palette.primary.main,
-        },
+        // '&:hover, &:focus': {
+        //   backgroundColor: palette.primary.main,
+        // },
         '&:focus + div': {
           height: 'auto',
         },
@@ -192,11 +193,11 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
 
       [breakpoints.up('md')]: {
         position: 'absolute',
-        top: '100%',
+        // top: '100%',
         left: 0,
         overflow: 'auto',
         height: '0.1%',
-        background: palette.common.black,
+        background: palette.grey[50],
         minWidth: '200px',
         '&:focus-within': {
           height: 'auto',
