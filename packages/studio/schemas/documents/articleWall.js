@@ -32,7 +32,7 @@ export default {
       to: {
         type: 'sliderType'
       },
-      description: 'Select Wall Type'
+      description: 'Select Slide Type'
     },
     {
       name: 'slides',
