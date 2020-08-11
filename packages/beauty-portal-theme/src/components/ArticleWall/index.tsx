@@ -18,7 +18,7 @@ const ArticleWall: FunctionComponent<ArticleWallInterface> = ({
   const breakpoints = {
     breakpoints: {
       768: {
-        slidesPerView: 3,
+        slidesPerView: 4,
         spaceBetween: 60,
       },
       320: {
@@ -30,15 +30,18 @@ const ArticleWall: FunctionComponent<ArticleWallInterface> = ({
 
   return (
     <div className={classes.wall}>
+      <div className={classes.sectionDivider}></div>
       <div className={classes.sectionTitle}>
         {headline && <h2 className={classes.sliderTitle}>{headline}</h2>}
       </div>
-      {_rawTextBlockBody && (
-        <BlockContent
-          serializers={blockTypeDefaultSerializers}
-          blocks={_rawTextBlockBody}
-        />
-      )}
+      <div className={classes.sectionDescription}>
+        {_rawTextBlockBody && (
+          <BlockContent
+            serializers={blockTypeDefaultSerializers}
+            blocks={_rawTextBlockBody}
+          />
+        )}
+      </div>
       <Wall
         type="tile"
         slides={slides}
@@ -52,7 +55,7 @@ const ArticleWall: FunctionComponent<ArticleWallInterface> = ({
         watchSlidesVisibility={true}
         breakpoints={breakpoints}
       />
-      <div style={{ textAlign: 'center' }}>
+      <div className={classes.articleNav}>
         {searchCtaLabel && (
           <Link
             className={classes.sectionLink}

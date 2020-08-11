@@ -3,6 +3,7 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
   createStyles({
     wall: {
+      maxWidth: '1350px',
       paddingTop: spacing(2.5),
       paddingBottom: spacing(2.5),
       position: 'relative',
@@ -31,7 +32,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
           height: 10,
         },
       },
-      '& h3': {
+      '& h4': {
         letterSpacing: '2px',
         textTransform: 'uppercase',
         lineHeight: 0.6,
@@ -56,6 +57,9 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         flexDirection: 'row',
         alignItems: 'center',
       },
+    },
+    sectionDescription: {
+      paddingBottom: '10px',
     },
     sectionLink: {
       color: palette.grey[100],
@@ -89,6 +93,15 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       [breakpoints.up('md')]: {
         fontSize: '1.75rem',
       },
+    },
+    articleNav: {
+      textAlign: 'center',
+      paddingTop: '20px',
+    },
+    sectionDivider: {
+      borderTop: `4px solid ${palette.primary.main}`,
+      height: '20px',
+      maxWidth: '40px',
     },
   })
 );

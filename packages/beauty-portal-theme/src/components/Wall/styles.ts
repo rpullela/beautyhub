@@ -161,7 +161,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         cursor: 'not-allowed',
       },
     },
-    // Tile SWall
+    // Tile Wall
     wallLink: {
       display: 'block',
       '&:hover': {
@@ -245,7 +245,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         backgroundPosition: '0 100%',
       },
     },
-    tileSlideType: {
+    tileWallType: {
       position: 'absolute',
       top: 0,
       left: 0,
@@ -280,6 +280,15 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       borderTop: 'none',
       padding: '0.5rem',
       height: '4.5em',
+    },
+    articleNav: {
+      paddingTop: '3px',
+      paddingBottom: '3px',
+      paddingLeft: spacing(1),
+      paddingRight: spacing(1),
+      opacity: '0.5',
+      backgroundColor: palette.grey[50],
+      color: 'white',
     },
   })
 );
