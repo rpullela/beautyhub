@@ -26,9 +26,9 @@ const TileWall: FunctionComponent<TileWallInterface> = ({
   };
 
   return (
-    <div className={classes.slider}>
+    <div className={classes.wall}>
       <div className={classes.sectionTitle}>
-        {headline && <h2 className={classes.sliderTitle}>{headline}</h2>}
+        {headline && <h2 className={classes.wallTitle}>{headline}</h2>}
         {searchCtaLabel && (
           <Link
             className={classes.sectionLink}

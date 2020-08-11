@@ -9,7 +9,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       marginBottom: spacing(3),
       marginRight: spacing(3),
     },
-    sliderWrapper: {
+    wallWrapper: {
       position: 'relative',
       [breakpoints.up('md')]: {
         margin: 0,
@@ -131,16 +131,6 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         paddingRight: spacing(2.5),
       },
     },
-    carouselArrow: {
-      position: 'absolute',
-      zIndex: 2,
-      top: 'calc(50% - 50px)',
-      width: 77,
-      height: 77,
-      cursor: 'pointer',
-      backgroundColor: 'transparent',
-      border: 'none',
-    },
     navigationButton: {
       display: 'none',
       position: 'absolute',
@@ -171,33 +161,8 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         cursor: 'not-allowed',
       },
     },
-    nextButton: {
-      right: 10,
-      '&:not(:disabled):hover': {
-        '& svg': {
-          fill: palette.primary.main,
-        },
-      },
-      [breakpoints.up('md')]: {
-        right: -60,
-      },
-    },
-    prevButton: {
-      left: 10,
-      '& svg': {
-        transform: 'rotate(180deg)',
-      },
-      '&:not(:disabled):hover': {
-        '& svg': {
-          fill: palette.primary.main,
-        },
-      },
-      [breakpoints.up('md')]: {
-        left: -60,
-      },
-    },
-    // Tile Slider
-    sliderLink: {
+    // Tile SWall
+    wallLink: {
       display: 'block',
       '&:hover': {
         '& p > span': {
@@ -262,7 +227,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         left: '.6875rem',
       },
     },
-    sliderItemCaption: {
+    wallItemCaption: {
       fontSize: '.875rem',
       fontWeight: 400,
       color: palette.common.black,

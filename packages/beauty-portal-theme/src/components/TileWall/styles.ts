@@ -32,7 +32,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         backgroundImage: `linear-gradient(120deg,${palette.common.black} 0%,${palette.common.black} 100%)`,
       },
     },
-    slider: {
+    wall: {
       paddingTop: spacing(2.5),
       position: 'relative',
       [breakpoints.up('md')]: {
@@ -53,7 +53,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         },
       },
     },
-    sliderLink: {
+    wallLink: {
       display: 'block',
       '&:hover': {
         '& p > span': {
@@ -64,8 +64,8 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         },
       },
     },
-    sliderTitle: {},
-    sliderItemCaption: {
+    wallTitle: {},
+    wallItemCaption: {
       fontSize: '.875rem',
       fontWeight: 600,
       color: palette.common.black,

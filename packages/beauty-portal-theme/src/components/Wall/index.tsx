@@ -25,7 +25,7 @@ const Wall: FunctionComponent<WallInterface> = ({
   const renderTileWallSlides = slide => {
     return (
       <div>
-        <Link className={classes.sliderLink} to={slide.path}>
+        <Link className={classes.wallLink} to={slide.path}>
           <div className={classes.heroImage}>
             <figure>
               <picture
@@ -75,7 +75,7 @@ const Wall: FunctionComponent<WallInterface> = ({
             )}
           </div>
           <div className={classes.tileCard}>
-            <h3 className={classes.sliderItemCaption}>
+            <h3 className={classes.wallItemCaption}>
               <span>{slide.headline}</span>
             </h3>
           </div>
@@ -88,7 +88,7 @@ const Wall: FunctionComponent<WallInterface> = ({
     return (
       <div>
         <Link
-          className={classNames(classes.sliderLink, classes.textCenter)}
+          className={classNames(classes.wallLink, classes.textCenter)}
           to={slide.path}
         >
           <div className={classes.heroImage}>
@@ -132,7 +132,7 @@ const Wall: FunctionComponent<WallInterface> = ({
               </picture>
             </figure>
           </div>
-          <h3 className={classes.sliderItemCaption}>
+          <h3 className={classes.wallItemCaption}>
             <span>{slide.name}</span>
           </h3>
         </Link>

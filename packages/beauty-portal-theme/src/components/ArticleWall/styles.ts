@@ -2,7 +2,7 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 
 export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
   createStyles({
-    slider: {
+    wall: {
       paddingTop: spacing(2.5),
       paddingBottom: spacing(2.5),
       position: 'relative',
@@ -30,6 +30,21 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         [breakpoints.up('md')]: {
           height: 10,
         },
+      },
+      '& h3': {
+        letterSpacing: '2px',
+        textTransform: 'uppercase',
+        lineHeight: 0.6,
+        fontSize: '1.75rem',
+        fontWeight: 400,
+        margin: 0,
+        marginBottom: spacing(1),
+        [breakpoints.up('md')]: {
+          fontSize: '2.30rem',
+        },
+      },
+      '& p': {
+        color: palette.grey[100],
       },
     },
     sectionTitle: {
@@ -67,12 +82,12 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     sliderTitle: {
       fontSize: '1.375rem',
       fontWeight: 600,
-      lineHeight: 1.1,
+      lineHeight: 0.6,
       letterSpacing: 0,
       margin: 0,
       marginBottom: spacing(1),
       [breakpoints.up('md')]: {
-        fontSize: '2.25rem',
+        fontSize: '1.75rem',
       },
     },
   })

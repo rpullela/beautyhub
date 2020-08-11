@@ -9,7 +9,7 @@
     "deploy": "sanity deploy",
     "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
     "build": "sanity build",
-    "graphql-deploy": "sanity graphql deploy --playground",
+    "graphql-deploy": "SANITY_AUTH_TOKEN=skBWROOdnxC5rv67CoBIeDTRoL7k1nrZAc3xYOvawyF8xUW3mb9y8pcwMpE9WlkYHLAErgbEO5ii5JbJu0RtaWfacL9XIRO0jlu8505urhdklkON4eFX38xhmE5PWWTjLE2PrDEkMOZCIxKPVJcrQjS1VhxQhL00xuG6PVhuytWABb8vZ7v7 sanity graphql deploy --playground",
     "lint": "eslint .",
     "test": "sanity check"
   },
