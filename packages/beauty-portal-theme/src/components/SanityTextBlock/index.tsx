@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { SanityTextBlockInterface } from './models';
+import { Link } from 'gatsby';
 
 import BlockContent from '@sanity/block-content-to-react';
 import { blockTypeDefaultSerializers } from '../../helpers/sanity';
@@ -32,6 +33,11 @@ const SanityTextBlock: FunctionComponent<SanityTextBlockInterface> = ({
             serializers={blockTypeDefaultSerializers}
             blocks={_rawTextBlockBody}
           />
+        </div>
+        <div className={classes.alignLink}>
+          <Link to="" className={classes.jumpIn}>
+            Jump In
+          </Link>
         </div>
       </div>
     </section>
