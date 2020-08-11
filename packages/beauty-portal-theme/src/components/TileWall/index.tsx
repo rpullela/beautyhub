@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from 'react';
 import { Link } from 'gatsby';
-import Slider from '../Slider';
-import { ArticleTileSliderInterface } from './models';
+import Wall from '../Wall';
+import { TileWallInterface } from './models';
 import { getSearchUrlWithTagsAndCategory } from '../../helpers/searchUrl';
 import useStyles from './styles';
 
-const ArticleTileSlider: FunctionComponent<ArticleTileSliderInterface> = ({
+const TileWall: FunctionComponent<TileWallInterface> = ({
   slides,
   headline,
   searchCtaLabel,
@@ -15,7 +15,7 @@ const ArticleTileSlider: FunctionComponent<ArticleTileSliderInterface> = ({
   const breakpoints = {
     breakpoints: {
       768: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 30,
       },
       320: {
@@ -38,8 +38,8 @@ const ArticleTileSlider: FunctionComponent<ArticleTileSliderInterface> = ({
           </Link>
         )}
       </div>
-      <Slider
-        type="tile"
+      <Wall
+        type="product"
         slides={slides}
         spaceBetween={30}
         slidesPerView={4}
@@ -55,4 +55,4 @@ const ArticleTileSlider: FunctionComponent<ArticleTileSliderInterface> = ({
   );
 };
 
-export default ArticleTileSlider;
+export default TileWall;

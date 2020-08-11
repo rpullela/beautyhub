@@ -1,13 +1,16 @@
 import React, { FunctionComponent } from 'react';
 import { Link } from 'gatsby';
-import Slider from '../Slider';
-import { ArticleTileSliderInterface } from './models';
+import Wall from '../Wall';
+import { ArticleWallInterface } from './models';
 import { getSearchUrlWithTagsAndCategory } from '../../helpers/searchUrl';
+import { blockTypeDefaultSerializers } from '../../helpers/sanity';
+import BlockContent from '@sanity/block-content-to-react';
 import useStyles from './styles';
 
-const ArticleTileSlider: FunctionComponent<ArticleTileSliderInterface> = ({
+const ArticleWall: FunctionComponent<ArticleWallInterface> = ({
   slides,
   headline,
+  _rawTextBlockBody,
   searchCtaLabel,
   searchTags,
 }) => {
@@ -15,12 +18,12 @@ const ArticleTileSlider: FunctionComponent<ArticleTileSliderInterface> = ({
   const breakpoints = {
     breakpoints: {
       768: {
-        slidesPerView: 4,
-        spaceBetween: 30,
+        slidesPerView: 3,
+        spaceBetween: 60,
       },
       320: {
-        slidesPerView: 2.5,
-        spaceBetween: 20,
+        slidesPerView: 2.1,
+        spaceBetween: 50,
       },
     },
   };
@@ -29,16 +32,14 @@ const ArticleTileSlider: FunctionComponent<ArticleTileSliderInterface> = ({
     <div className={classes.slider}>
       <div className={classes.sectionTitle}>
         {headline && <h2 className={classes.sliderTitle}>{headline}</h2>}
-        {searchCtaLabel && (
-          <Link
-            className={classes.sectionLink}
-            to={getSearchUrlWithTagsAndCategory(searchTags)}
-          >
-            {searchCtaLabel}
-          </Link>
-        )}
       </div>
-      <Slider
+      {_rawTextBlockBody && (
+        <BlockContent
+          serializers={blockTypeDefaultSerializers}
+          blocks={_rawTextBlockBody}
+        />
+      )}
+      <Wall
         type="tile"
         slides={slides}
         spaceBetween={30}
@@ -51,8 +52,18 @@ const ArticleTileSlider: FunctionComponent<ArticleTileSliderInterface> = ({
         watchSlidesVisibility={true}
         breakpoints={breakpoints}
       />
+      <div style={{ textAlign: 'center' }}>
+        {searchCtaLabel && (
+          <Link
+            className={classes.sectionLink}
+            to={getSearchUrlWithTagsAndCategory(searchTags)}
+          >
+            {searchCtaLabel}
+          </Link>
+        )}
+      </div>
     </div>
   );
 };
 
-export default ArticleTileSlider;
+export default ArticleWall;

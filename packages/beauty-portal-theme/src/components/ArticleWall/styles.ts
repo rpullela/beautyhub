@@ -6,7 +6,8 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       paddingTop: spacing(2.5),
       paddingBottom: spacing(2.5),
       position: 'relative',
-      marginLeft: spacing(2),
+      marginLeft: spacing(4),
+      marginRight: spacing(4),
       [breakpoints.up('md')]: {
         paddingTop: spacing(5),
         paddingBottom: spacing(5),
@@ -42,10 +43,13 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       },
     },
     sectionLink: {
-      color: palette.common.black,
-      fontSize: '.875rem',
+      color: palette.grey[100],
+      fontSize: '.600rem',
       fontWeight: 700,
-      alignSelf: 'flex-start',
+      border: `1px solid ${palette.grey[50]}`,
+      padding: '5px 50px',
+      textTransform: 'uppercase',
+      letterSpacing: '2px',
       backgroundImage: `linear-gradient(120deg,${palette.primary.main} 0%,${palette.primary.main} 100%)`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: '100% .1875rem',
@@ -57,7 +61,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         alignSelf: 'center',
       },
       '&:hover, &:focus': {
-        backgroundImage: `linear-gradient(120deg,${palette.common.black} 0%,${palette.common.black} 100%)`,
+        backgroundImage: `linear-gradient(120deg,${palette.grey[100]} 0%,${palette.common.black} 100%)`,
       },
     },
     sliderTitle: {

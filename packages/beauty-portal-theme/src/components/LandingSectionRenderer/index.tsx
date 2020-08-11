@@ -5,10 +5,12 @@ import SanityProductSlider from '../SanityProductSlider';
 import SanityTextBlock from '../SanityTextBlock';
 import NewsletterBlock from '../NewsletterBlock';
 import SanityVideoBlock from '../SanityVideoBlock';
+import ArticleWall from '../ArticleWall';
 import ImageBlock from '../ImageBlock';
 
 const componentsMap = {
   SanityArticleSlider: SanityArticleSlider,
+  SanityArticleWall: ArticleWall,
   SanityProductSlider: SanityProductSlider,
   SanityTextBlock: SanityTextBlock,
   SanityNewsletterBlock: NewsletterBlock,
