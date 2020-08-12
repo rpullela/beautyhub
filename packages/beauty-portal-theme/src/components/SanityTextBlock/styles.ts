@@ -78,7 +78,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
           backgroundRepeat: 'no-repeat',
           backgroundSize: '30px 30px',
           backgroundPosition: 'center center',
-          backgroundColor: palette.quaternary.main,
+          backgroundColor: palette.common.white,
           height: 40,
           width: 40,
           transform: 'translateX(-50%)',

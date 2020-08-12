@@ -258,7 +258,7 @@ const Slider: FunctionComponent<SliderInterface> = ({
             classes.nextButton,
             classes.white
           )}
-          style={{ paddingLeft: '9px', paddingTop: '5px' }}
+          style={{ paddingLeft: '8px', paddingTop: '5px' }}
           type="button"
           onClick={swiperNext}
           disabled={isLastSlide}
@@ -292,7 +292,7 @@ const Slider: FunctionComponent<SliderInterface> = ({
             classes.prevButton,
             classes.white
           )}
-          style={{ paddingRight: '9px', paddingTop: '5px' }}
+          style={{ paddingRight: '6px', paddingTop: '5px' }}
           type="button"
           onClick={swiperPrev}
           disabled={isFirstSlide}

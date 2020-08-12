@@ -229,7 +229,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     heroImage: {
       position: 'relative',
       overflow: 'hidden',
-      border: '1px solid grey',
+      // border: '1px solid grey',
       '& picture img': {
         transition: 'all .8s ease-out 0s !important',
       },

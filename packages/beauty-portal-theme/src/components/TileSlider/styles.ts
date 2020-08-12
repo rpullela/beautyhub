@@ -14,7 +14,6 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     },
     sectionDescription: {
       paddingBottom: '10px',
-      color: palette.grey[100],
     },
     sectionLink: {
       color: palette.common.black,
@@ -89,7 +88,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       },
     },
     sectionDivider: {
-      borderTop: `4px solid white`,
+      borderTop: `4px solid ${palette.common.white}`,
       height: '20px',
       maxWidth: '40px',
     },

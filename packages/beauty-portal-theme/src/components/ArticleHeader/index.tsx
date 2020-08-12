@@ -32,7 +32,7 @@ const ArticleHeader: FunctionComponent<ArticleHeaderInterface> = ({
     _rawHeroVideo,
     _type,
   } = article;
-  console.log(article);
+
   const playVideo = (event: any) => {
     setVideoLoading(true);
     setVideoSourceUrl(
