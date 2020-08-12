@@ -4,6 +4,7 @@ import SiteNavigation from '../Navigation';
 import SiteSearch from './search';
 import NewsletterFollow from './newsletter-follow';
 import useStyles from './styles';
+import RexonaLogo from '../../images/rexona-logo.png';
 
 const Header: FunctionComponent = () => {
   const data = useStaticQuery(graphql`
@@ -26,7 +27,12 @@ const Header: FunctionComponent = () => {
         <div className={classes.headerContentWrapper}>
           <div className={classes.logo}>
             <Link className={classes.logoLink} to="/">
-              Rexona <span>Portal</span>
+              <img
+                src={RexonaLogo}
+                alt="Rexona Logo"
+                role="presentation"
+                width="48"
+              />
             </Link>
           </div>
           <SiteNavigation />
@@ -41,30 +47,30 @@ const Header: FunctionComponent = () => {
             }}
           >
             <span className={classes.navigationLinks}>
-              <Link to="/" className={classes.navigationLink}>
+              <Link to="/contact-us" className={classes.navigationLink}>
                 Contact
               </Link>{' '}
               |{' '}
-              <Link to="/" className={classes.navigationLink}>
+              <Link to="/about-us" className={classes.navigationLink}>
                 About Us
               </Link>{' '}
               |{' '}
-              <Link to="/" className={classes.navigationLink}>
+              <Link to="/faqs" className={classes.navigationLink}>
                 FAQs
               </Link>
               |{' '}
               {auth ? (
-                <Link to="/" className={classes.navigationLink}>
+                <Link to="/profile" className={classes.navigationLink}>
                   Profile
                 </Link>
               ) : (
                 <span>
                   {' '}
-                  <Link to="/" className={classes.navigationLink}>
+                  <Link to="/login" className={classes.navigationLink}>
                     Login
                   </Link>
                   /
-                  <Link to="/" className={classes.navigationLink}>
+                  <Link to="/sign-up" className={classes.navigationLink}>
                     Sign up
                   </Link>
                 </span>
@@ -74,8 +80,8 @@ const Header: FunctionComponent = () => {
               label={'Subscribe to our newsletter'}
               links={data.brandInfo}
             /> */}
-            <SiteSearch />
           </span>
+          <SiteSearch />
         </div>
       </div>
     </header>

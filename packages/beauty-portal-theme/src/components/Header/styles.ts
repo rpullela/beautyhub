@@ -23,14 +23,15 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       },
     },
     logo: {
-      position: 'absolute',
-      left: 0,
-      zIndex: 1,
-      padding: '10px 20px',
+      paddingBottom: '20px',
       [breakpoints.up('md')]: {
         margin: 0,
         marginRight: spacing(3.75),
         marginBottom: spacing(-0.25),
+      },
+
+      [breakpoints.down('sm')]: {
+        margin: 'auto',
       },
     },
     logoLink: {
@@ -196,8 +197,14 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     siteSearch: {
       position: 'absolute',
       right: 60,
+      [breakpoints.up('lg')]: {
+        paddingTop: '30px',
+      },
       [breakpoints.up('md')]: {
-        right: 20,
+        right: 20
+      },
+      [breakpoints.down('sm')]: {
+        right: 0,
       },
       '& svg': {
         fill: palette.common.white,
