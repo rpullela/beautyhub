@@ -27,6 +27,7 @@ const TileSlider: FunctionComponent<TileSliderInterface> = ({
 
   return (
     <div className={classes.slider}>
+      <div className={classes.sectionDivider}></div>
       <div className={classes.sectionTitle}>
         {headline && <h2 className={classes.sliderTitle}>{headline}</h2>}
         {searchCtaLabel && (

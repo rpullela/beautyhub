@@ -264,7 +264,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     sliderItemCaption: {
       fontSize: '.875rem',
       fontWeight: 600,
-      color: palette.common.black,
+
       marginTop: spacing(0.625),
       marginBottom: spacing(0.625),
       [breakpoints.up('md')]: {
@@ -278,6 +278,12 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         backgroundSize: '100% .1875rem',
         backgroundPosition: '0 100%',
       },
+    },
+    white: {
+      color: palette.common.white,
+    },
+    black: {
+      color: palette.common.black,
     },
     tileSlideType: {
       position: 'absolute',

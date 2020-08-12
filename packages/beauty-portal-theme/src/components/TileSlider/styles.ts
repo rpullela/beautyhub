@@ -84,5 +84,10 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         backgroundPosition: '0 100%',
       },
     },
+    sectionDivider: {
+      borderTop: `4px solid white`,
+      height: '20px',
+      maxWidth: '40px',
+    },
   })
 );
