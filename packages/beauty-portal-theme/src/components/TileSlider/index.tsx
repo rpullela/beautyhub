@@ -3,11 +3,14 @@ import { Link } from 'gatsby';
 import Slider from '../Slider';
 import { TileSliderInterface } from './models';
 import { getSearchUrlWithTagsAndCategory } from '../../helpers/searchUrl';
+import BlockContent from '@sanity/block-content-to-react';
+import { blockTypeDefaultSerializers } from '../../helpers/sanity';
 import useStyles from './styles';
 
 const TileSlider: FunctionComponent<TileSliderInterface> = ({
   slides,
   headline,
+  _rawTextBlockBody,
   searchCtaLabel,
   searchTags,
 }) => {
@@ -30,6 +33,12 @@ const TileSlider: FunctionComponent<TileSliderInterface> = ({
       <div className={classes.sectionDivider}></div>
       <div className={classes.sectionTitle}>
         {headline && <h2 className={classes.sliderTitle}>{headline}</h2>}
+        {_rawTextBlockBody && (
+          <BlockContent
+            serializers={blockTypeDefaultSerializers}
+            blocks={_rawTextBlockBody}
+          />
+        )}
         {searchCtaLabel && (
           <Link
             className={classes.sectionLink}
