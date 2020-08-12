@@ -24,32 +24,33 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         backgroundColor: palette.common.white,
         '& p': {
           width: '80%',
-          margin: 'auto',
         },
       },
     },
     sectionDescription: {
       textAlign: 'left',
-      margin: 'auto',
+      margin: '32px',
       color: palette.grey[50],
       '& p': {
         fontSize: '.875rem',
         lineHeight: '2.5rem',
-        margin: 0,
         [breakpoints.up('md')]: {
           fontSize: '1.125rem',
+          margin: 0,
         },
       },
       '& h1, & h2, & h3, & h4, & h5, & h6': {
         color: palette.primary.main,
       },
       '& h2': {
-        fontSize: '1.5rem',
-        letterSpacing: '2px',
-        lineHeight: '2rem',
-        fontWeight: '700',
-        marginBlockStart: '0.4em',
-        marginBlockEnd: '0.4em',
+        fontSize: '1.375rem',
+        fontWeight: 600,
+        lineHeight: 0.6,
+        letterSpacing: 0,
+        margin: 0,
+        marginBottom: spacing(1),
+        [breakpoints.up('md')]: {
+          fontSize: '1.75rem',
       },
       '& blockquote': {
         position: 'relative',
