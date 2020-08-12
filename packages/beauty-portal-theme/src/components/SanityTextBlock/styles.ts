@@ -48,9 +48,11 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         lineHeight: 0.6,
         letterSpacing: 0,
         margin: 0,
+        paddingBottom: '10px',
         marginBottom: spacing(1),
         [breakpoints.up('md')]: {
           fontSize: '1.75rem',
+        },
       },
       '& blockquote': {
         position: 'relative',

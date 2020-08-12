@@ -69,7 +69,10 @@ const Wall: FunctionComponent<WallInterface> = ({
                 </figure>
                 {slide.A}
                 {slide.heroVideo && (
-                  <span className={`icon ${classes.iconPlay}`}>
+                  <span
+                    className={`icon ${classes.iconPlay}`}
+                    style={{ marginBottom: '25px' }}
+                  >
                     <PlayVideo />
                     <span hidden>Play Video</span>
                   </span>
