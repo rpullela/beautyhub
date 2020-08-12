@@ -26,8 +26,8 @@ export default {
       description: 'Add some rich text or quote'
     },
     {
-      name: 'sliderType',
-      title: 'Slider Type',
+      name: 'slideType',
+      title: 'Slide Type',
       type: 'reference',
       to: {
         type: 'sliderType'
