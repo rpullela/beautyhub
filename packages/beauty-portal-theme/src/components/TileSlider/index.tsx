@@ -42,7 +42,7 @@ const TileSlider: FunctionComponent<TileSliderInterface> = ({
           />
         )}
       </div>
-      <div>
+      <div className={classes.productNav}>
         {searchCtaLabel && (
           <Link
             className={classes.sectionLink}

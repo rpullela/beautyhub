@@ -36,7 +36,7 @@ const SanityTextBlock: FunctionComponent<SanityTextBlockInterface> = ({
         </div>
         <div className={classes.alignLink}>
           <Link to="" className={classes.jumpIn}>
-            Jump In together
+            Jump In
           </Link>
         </div>
       </div>

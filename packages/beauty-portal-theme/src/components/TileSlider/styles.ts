@@ -5,6 +5,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     sectionTitle: {
       display: 'flex',
       flexDirection: 'column',
+      fontSize: '1.375rem',
       marginBottom: spacing(1.875),
       [breakpoints.up('md')]: {
         marginBottom: spacing(3),
@@ -36,24 +37,41 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       },
     },
     slider: {
+      maxWidth: '1350px',
       paddingTop: spacing(2.5),
+      paddingBottom: spacing(2.5),
       position: 'relative',
+      marginLeft: spacing(4),
+      marginRight: spacing(4),
+
       [breakpoints.up('md')]: {
-        paddingTop: 0,
+        paddingTop: spacing(5),
+        paddingBottom: spacing(5),
+      },
+      '& .swiper-container': {
         paddingBottom: spacing(2.5),
       },
+
       '& .swiper-scrollbar': {
         backgroundColor: 'transparent',
       },
       '& .swiper-scrollbar-drag': {
-        backgroundColor: 'rgba(0,0,0,.2)',
+        backgroundColor: palette.grey[20],
       },
-      '& .swiper-container-horizontal > .swiper-scrollbar': {
-        width: '100%',
-        height: 5,
+      '& h4': {
+        letterSpacing: '2px',
+        textTransform: 'uppercase',
+        lineHeight: 0.6,
+        fontSize: '1.75rem',
+        fontWeight: 400,
+        margin: 0,
+        marginBottom: spacing(1),
         [breakpoints.up('md')]: {
-          height: 10,
+          fontSize: '2.30rem',
         },
+      },
+      '& p': {
+        color: palette.grey[100],
       },
     },
     sliderLink: {
@@ -67,7 +85,17 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         },
       },
     },
-    sliderTitle: {},
+    sliderTitle: {
+      fontSize: '1.375rem',
+      fontWeight: 600,
+      lineHeight: 0.6,
+      letterSpacing: 0,
+      margin: 0,
+      marginBottom: spacing(1),
+      [breakpoints.up('md')]: {
+        fontSize: '1.75rem',
+      },
+    },
     sliderItemCaption: {
       fontSize: '.875rem',
       fontWeight: 600,
@@ -91,6 +119,10 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       borderTop: `4px solid ${palette.common.white}`,
       height: '20px',
       maxWidth: '40px',
+    },
+    productNav: {
+      textAlign: 'center',
+      paddingTop: '20px',
     },
   })
 );

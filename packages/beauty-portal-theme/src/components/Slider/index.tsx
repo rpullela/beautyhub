@@ -173,16 +173,16 @@ const Slider: FunctionComponent<SliderInterface> = ({
                 ) : null}
               </figure>
             </div>
-            <h3
-              className={classNames(classes.sliderItemCaption, classes.white)}
-            >
-              <span>{slide.tagLine}</span>
-            </h3>
             <h4
               className={classNames(classes.sliderItemCaption, classes.white)}
             >
-              <span>{slide.name}</span>
+              <span>{slide.tagLine}</span>
             </h4>
+            <h5
+              className={classNames(classes.sliderItemCaption, classes.white)}
+            >
+              <span>{slide.name}</span>
+            </h5>
             {/* <p className={`${classes.sliderItemCaption} ${classes.white}`}>
               <span>{slide.tags}</span>
             </p> */}
