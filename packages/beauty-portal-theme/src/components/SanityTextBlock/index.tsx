@@ -27,7 +27,7 @@ const SanityTextBlock: FunctionComponent<SanityTextBlockInterface> = ({
         getComponentvariant(textBlockType.name)
       )}
     >
-      <div className="container">
+      <div className={classNames('container', 'pad0')}>
         <div className={classes.sectionDescription}>
           <BlockContent
             serializers={blockTypeDefaultSerializers}
@@ -36,7 +36,7 @@ const SanityTextBlock: FunctionComponent<SanityTextBlockInterface> = ({
         </div>
         <div className={classes.alignLink}>
           <Link to="" className={classes.jumpIn}>
-            Jump In
+            Jump In together
           </Link>
         </div>
       </div>
