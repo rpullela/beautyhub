@@ -109,7 +109,7 @@ export const query = graphql`
             }
           }
         }
-        sliderType {
+        slideType {
           description
           name
         }
@@ -212,7 +212,7 @@ export const query = graphql`
             }
           }
         }
-        sliderType {
+        slideType {
           description
           name
         }
