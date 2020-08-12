@@ -144,6 +144,7 @@ export const query = graphql`
         id
         name
         headline
+        _rawTextBlockBody(resolveReferences: { maxDepth: 10 })
         slides {
           _type
           name

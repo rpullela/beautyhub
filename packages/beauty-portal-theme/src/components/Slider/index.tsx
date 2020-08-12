@@ -173,9 +173,19 @@ const Slider: FunctionComponent<SliderInterface> = ({
                 ) : null}
               </figure>
             </div>
-            <h3 className={classes.sliderItemCaption}>
-              <span>{slide.name}</span>
+            <h3
+              className={classNames(classes.sliderItemCaption, classes.white)}
+            >
+              <span>{slide.tagLine}</span>
             </h3>
+            <h4
+              className={classNames(classes.sliderItemCaption, classes.white)}
+            >
+              <span>{slide.name}</span>
+            </h4>
+            {/* <p className={`${classes.sliderItemCaption} ${classes.white}`}>
+              <span>{slide.tags}</span>
+            </p> */}
           </Link>
         </div>
       </SwiperSlide>
@@ -243,7 +253,12 @@ const Slider: FunctionComponent<SliderInterface> = ({
         data-inview={inView}
       >
         <button
-          className={classNames(classes.navigationButton, classes.nextButton)}
+          className={classNames(
+            classes.navigationButton,
+            classes.nextButton,
+            classes.white
+          )}
+          style={{ paddingLeft: '9px', paddingTop: '5px' }}
           type="button"
           onClick={swiperNext}
           disabled={isLastSlide}
@@ -272,7 +287,12 @@ const Slider: FunctionComponent<SliderInterface> = ({
           })}
         </Swiper>
         <button
-          className={classNames(classes.navigationButton, classes.prevButton)}
+          className={classNames(
+            classes.navigationButton,
+            classes.prevButton,
+            classes.white
+          )}
+          style={{ paddingRight: '9px', paddingTop: '5px' }}
           type="button"
           onClick={swiperPrev}
           disabled={isFirstSlide}

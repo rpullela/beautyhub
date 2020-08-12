@@ -20,6 +20,12 @@ export default {
       description: 'Headline will be displayed on website'
     },
     {
+      name: 'textBlockBody',
+      type: 'textBlockPortableText',
+      title: 'Enhance your slider with text',
+      description: 'Add some rich text'
+    },
+    {
       name: 'slideType',
       title: 'Slide Type',
       type: 'reference',

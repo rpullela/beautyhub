@@ -12,6 +12,10 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         alignItems: 'center',
       },
     },
+    sectionDescription: {
+      paddingBottom: '10px',
+      color: palette.grey[100],
+    },
     sectionLink: {
       color: palette.common.black,
 
@@ -83,6 +87,11 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         backgroundSize: '100% .1875rem',
         backgroundPosition: '0 100%',
       },
+    },
+    sectionDivider: {
+      borderTop: `4px solid white`,
+      height: '20px',
+      maxWidth: '40px',
     },
   })
 );
