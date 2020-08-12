@@ -33,12 +33,16 @@ const TileSlider: FunctionComponent<TileSliderInterface> = ({
       <div className={classes.sectionDivider}></div>
       <div className={classes.sectionTitle}>
         {headline && <h2 className={classes.sliderTitle}>{headline}</h2>}
+      </div>
+      <div className={classes.sectionDescription}>
         {_rawTextBlockBody && (
           <BlockContent
             serializers={blockTypeDefaultSerializers}
             blocks={_rawTextBlockBody}
           />
         )}
+      </div>
+      <div>
         {searchCtaLabel && (
           <Link
             className={classes.sectionLink}
