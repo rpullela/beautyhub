@@ -3,11 +3,13 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 export default makeStyles(({ palette }: Theme) =>
   createStyles({
     element: {
-      backgroundColor: palette.primary.main,
-      border: 'none',
-      color: palette.common.black,
+      backgroundColor: palette.common.white,
+      border: `2px solid ${palette.primary.main}`,
+      color: palette.primary.main,
+      fontWeight: 700,
+      borderRadius: '25px',
       position: 'fixed',
-      width: 45,
+      width: 130,
       height: 45,
       display: 'flex',
       alignItems: 'center',
@@ -26,7 +28,9 @@ export default makeStyles(({ palette }: Theme) =>
         right: 0,
         bottom: 0,
         height: 'auto',
-        background: palette.common.black,
+        borderRadius: '25px',
+        background: palette.primary.main,
+        color: palette.common.white,
         transform: 'scaleY(0)',
         transformOrigin: '0 100%',
         transitionProperty: 'transform',
@@ -34,15 +38,16 @@ export default makeStyles(({ palette }: Theme) =>
         transitionTimingFunction: 'ease-out',
       },
       '&:hover': {
+        color: palette.common.white,
         '&:before': {
           transform: 'scaleY(1)',
         },
         '& svg': {
-          fill: palette.primary.main,
+          fill: palette.common.white,
         },
       },
       '& svg': {
-        fill: palette.common.black,
+        fill: palette.primary.main,
         width: 24,
         height: 24,
         transition: 'all .5s',

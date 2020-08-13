@@ -84,7 +84,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       marginBottom: spacing(1),
       textTransform: 'uppercase',
       letterSpacing: 2,
-      color: palette.quinary.main,
+      color: palette.primary.main,
       fontSize: '.75rem',
       fontWeight: 700,
     },
@@ -92,7 +92,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       fontSize: '.875rem',
       fontWeight: 700,
       backgroundColor: palette.primary.main,
-      color: palette.common.black,
+      color: palette.common.white,
       paddingTop: spacing(1.25),
       paddingBottom: spacing(1.25),
       paddingLeft: spacing(2),
@@ -110,7 +110,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         left: 0,
         right: 0,
         bottom: 0,
-        background: palette.common.black,
+        background: palette.grey[100],
         transform: 'scaleX(0)',
         transformOrigin: '0 50%',
         transitionProperty: 'transform',
@@ -131,28 +131,30 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         paddingRight: spacing(2.5),
       },
     },
-    carouselArrow: {
-      position: 'absolute',
-      zIndex: 2,
-      top: 'calc(50% - 50px)',
-      width: 77,
-      height: 77,
-      cursor: 'pointer',
-      backgroundColor: 'transparent',
-      border: 'none',
-    },
+    // carouselArrow: {
+    //   position: 'absolute',
+    //   zIndex: 2,
+    //   top: 'calc(50% - 50px)',
+    //   width: 77,
+    //   height: 77,
+    //   cursor: 'pointer',
+    //   backgroundColor: 'transparent',
+    //   border: 'none',
+    // },
     navigationButton: {
       display: 'none',
       position: 'absolute',
       top: '30%',
       transform: 'translateY(-50%)',
       zIndex: 2,
-      background: 'transparent',
+      background: palette.common.white,
+      opacity: '80%',
       border: 'none',
+      borderRadius: '50%',
       padding: 0,
       margin: 0,
-      width: 26,
-      height: 50,
+      width: 80,
+      height: 80,
       cursor: 'pointer',
       '& svg': {
         transition: 'all .3s ease-in',
@@ -160,26 +162,39 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       [breakpoints.up('sm')]: {
         display: 'block',
         top: '45%',
-        height: 80,
-        width: 45,
+        height: 50,
+        width: 50,
         '& svg': {
           transition: 'all .3s ease-in',
+          height: '50%',
+          width: '50%',
         },
       },
       '&:disabled': {
         opacity: 0.2,
         cursor: 'not-allowed',
       },
+      '&:before': {
+        content: '',
+        borderTop: 'solid 10px transparent',
+        borderLeft: 'solid 10px #FFF',
+        borderBottom: 'solid 10px transparent',
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        margin: '-10px 0 0 -3px',
+      },
     },
     nextButton: {
       right: 10,
+
       '&:not(:disabled):hover': {
         '& svg': {
           fill: palette.primary.main,
         },
       },
       [breakpoints.up('md')]: {
-        right: -60,
+        right: -90,
       },
     },
     prevButton: {
@@ -193,7 +208,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         },
       },
       [breakpoints.up('md')]: {
-        left: -60,
+        left: -90,
       },
     },
     // Tile Slider
@@ -214,6 +229,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     heroImage: {
       position: 'relative',
       overflow: 'hidden',
+      // border: '1px solid grey',
       '& picture img': {
         transition: 'all .8s ease-out 0s !important',
       },
@@ -238,7 +254,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         left: 0,
         right: 0,
         bottom: 0,
-        background: palette.common.black,
+        background: palette.grey[100],
         transform: 'scaleX(0)',
         transformOrigin: '0 50%',
         transitionProperty: 'transform',
@@ -264,7 +280,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     sliderItemCaption: {
       fontSize: '.875rem',
       fontWeight: 600,
-      color: palette.common.black,
+      textAlign: 'left',
       marginTop: spacing(0.625),
       marginBottom: spacing(0.625),
       [breakpoints.up('md')]: {
@@ -278,6 +294,12 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         backgroundSize: '100% .1875rem',
         backgroundPosition: '0 100%',
       },
+    },
+    white: {
+      color: palette.common.white,
+    },
+    black: {
+      color: palette.common.black,
     },
     tileSlideType: {
       position: 'absolute',
@@ -308,6 +330,12 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       [breakpoints.up('md')]: {
         paddingBottom: 0,
       },
+    },
+    tileCard: {
+      border: '1px solid grey',
+      borderTop: 'none',
+      padding: '0.5rem',
+      height: '4.5em',
     },
   })
 );

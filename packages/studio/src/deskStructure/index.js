@@ -108,6 +108,12 @@ export default () =>
                 .child(S.documentTypeList('productSlider').title('Slider for products')),
               S.divider(),
               S.listItem()
+                .title('Wall - Articles')
+                .icon(FaSlidersH)
+                .schemaType('articleWall')
+                .child(S.documentTypeList('articleWall').title('Wall for articles')),
+              S.divider(),
+              S.listItem()
                 .title('Text Block')
                 .icon(MdTextFields)
                 .schemaType('textBlock')
@@ -327,6 +333,7 @@ export default () =>
             'brand',
             'product',
             'sliderType',
+            // 'wallType',
             'articleSlider',
             'productSlider',
             'tool',

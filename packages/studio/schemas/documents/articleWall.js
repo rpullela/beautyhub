@@ -1,22 +1,22 @@
 import { FaSlidersH } from 'react-icons/fa'
 
 export default {
-  name: 'articleSlider',
+  name: 'articleWall',
   type: 'document',
   icon: FaSlidersH,
-  title: 'Article Slider',
-  description: 'Article slider for hero and tile user experiences ',
+  title: 'Article Wall',
+  description: 'Article wall for hero and tile user experiences ',
   fields: [
     {
       name: 'name',
       type: 'string',
-      title: 'Slider',
-      description: 'Name is used to identify the slider for page layout'
+      title: 'Article Wall',
+      description: 'Name is used to identify the article wall for page layout'
     },
     {
       name: 'headline',
-      title: 'Headline',
       type: 'string',
+      title: 'Headline',
       description: 'Headline will be displayed on website'
     },
     {
@@ -32,7 +32,7 @@ export default {
       to: {
         type: 'sliderType'
       },
-      description: 'Select Slide Type'
+      description: 'Select Wall Type'
     },
     {
       name: 'slides',
@@ -70,7 +70,7 @@ export default {
   preview: {
     select: {
       title: 'name',
-      subtitle: 'slideType.name',
+      subtitle: 'articleWallType.name',
       media: 'FaSlidersH'
     }
   }

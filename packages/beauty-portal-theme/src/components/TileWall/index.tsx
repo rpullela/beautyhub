@@ -1,16 +1,13 @@
 import React, { FunctionComponent } from 'react';
 import { Link } from 'gatsby';
-import Slider from '../Slider';
-import { TileSliderInterface } from './models';
+import Wall from '../Wall';
+import { TileWallInterface } from './models';
 import { getSearchUrlWithTagsAndCategory } from '../../helpers/searchUrl';
-import BlockContent from '@sanity/block-content-to-react';
-import { blockTypeDefaultSerializers } from '../../helpers/sanity';
 import useStyles from './styles';
 
-const TileSlider: FunctionComponent<TileSliderInterface> = ({
+const TileWall: FunctionComponent<TileWallInterface> = ({
   slides,
   headline,
-  _rawTextBlockBody,
   searchCtaLabel,
   searchTags,
 }) => {
@@ -18,7 +15,7 @@ const TileSlider: FunctionComponent<TileSliderInterface> = ({
   const breakpoints = {
     breakpoints: {
       768: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 30,
       },
       320: {
@@ -29,20 +26,9 @@ const TileSlider: FunctionComponent<TileSliderInterface> = ({
   };
 
   return (
-    <div className={classes.slider}>
-      <div className={classes.sectionDivider}></div>
+    <div className={classes.wall}>
       <div className={classes.sectionTitle}>
-        {headline && <h2 className={classes.sliderTitle}>{headline}</h2>}
-      </div>
-      <div className={classes.sectionDescription}>
-        {_rawTextBlockBody && (
-          <BlockContent
-            serializers={blockTypeDefaultSerializers}
-            blocks={_rawTextBlockBody}
-          />
-        )}
-      </div>
-      <div className={classes.productNav}>
+        {headline && <h2 className={classes.wallTitle}>{headline}</h2>}
         {searchCtaLabel && (
           <Link
             className={classes.sectionLink}
@@ -52,7 +38,7 @@ const TileSlider: FunctionComponent<TileSliderInterface> = ({
           </Link>
         )}
       </div>
-      <Slider
+      <Wall
         type="product"
         slides={slides}
         spaceBetween={30}
@@ -69,4 +55,4 @@ const TileSlider: FunctionComponent<TileSliderInterface> = ({
   );
 };
 
-export default TileSlider;
+export default TileWall;

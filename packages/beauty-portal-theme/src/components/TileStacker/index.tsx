@@ -16,7 +16,7 @@ const TileStacker: FunctionComponent<TileStackerInterface> = ({
 
   const renderer = slide => {
     return (
-      <Grid item xs={12} md={4}>
+      <Grid item xs={12} md={3}>
         <div key={slide.headline}>
           <div className={classes.tile}>
             <span className={classes.slideType}>{slide._type}</span>

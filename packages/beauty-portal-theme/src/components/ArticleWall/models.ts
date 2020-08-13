@@ -1,7 +1,8 @@
-export interface TileSliderInterface {
+export interface ArticleWallInterface {
+  name: string;
   slides: any;
   headline: string | null;
-  searchCtaLabel: string;
   _rawTextBlockBody: any;
+  searchCtaLabel: string;
   searchTags: any;
 }
