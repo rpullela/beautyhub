@@ -71,7 +71,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         left: 0,
         right: 0,
         bottom: 0,
-        background: palette.common.black,
+        bbackground: palette.grey[100],
         transform: 'scaleX(0)',
         transformOrigin: '0 50%',
         transitionProperty: 'transform',

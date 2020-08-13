@@ -5,16 +5,12 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     sectionTitle: {
       display: 'flex',
       flexDirection: 'column',
-      fontSize: '1.375rem',
       marginBottom: spacing(1.875),
       [breakpoints.up('md')]: {
         marginBottom: spacing(3),
         flexDirection: 'row',
         alignItems: 'center',
       },
-    },
-    sectionDescription: {
-      paddingBottom: '10px',
     },
     sectionLink: {
       color: palette.common.black,
@@ -36,45 +32,28 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         backgroundImage: `linear-gradient(120deg,${palette.common.black} 0%,${palette.common.black} 100%)`,
       },
     },
-    slider: {
-      maxWidth: '1350px',
+    wall: {
       paddingTop: spacing(2.5),
-      paddingBottom: spacing(2.5),
       position: 'relative',
-      marginLeft: spacing(4),
-      marginRight: spacing(4),
-
       [breakpoints.up('md')]: {
-        paddingTop: spacing(5),
-        paddingBottom: spacing(5),
-      },
-      '& .swiper-container': {
+        paddingTop: 0,
         paddingBottom: spacing(2.5),
       },
-
       '& .swiper-scrollbar': {
         backgroundColor: 'transparent',
       },
       '& .swiper-scrollbar-drag': {
-        backgroundColor: palette.grey[20],
+        backgroundColor: 'rgba(0,0,0,.2)',
       },
-      '& h4': {
-        letterSpacing: '2px',
-        textTransform: 'uppercase',
-        lineHeight: 0.6,
-        fontSize: '1.75rem',
-        fontWeight: 400,
-        margin: 0,
-        marginBottom: spacing(1),
+      '& .swiper-container-horizontal > .swiper-scrollbar': {
+        width: '100%',
+        height: 5,
         [breakpoints.up('md')]: {
-          fontSize: '2.30rem',
+          height: 10,
         },
       },
-      '& p': {
-        color: palette.grey[100],
-      },
     },
-    sliderLink: {
+    wallLink: {
       display: 'block',
       '&:hover': {
         '& p > span': {
@@ -85,18 +64,8 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         },
       },
     },
-    sliderTitle: {
-      fontSize: '1.375rem',
-      fontWeight: 600,
-      lineHeight: 0.6,
-      letterSpacing: 0,
-      margin: 0,
-      marginBottom: spacing(1),
-      [breakpoints.up('md')]: {
-        fontSize: '1.75rem',
-      },
-    },
-    sliderItemCaption: {
+    wallTitle: {},
+    wallItemCaption: {
       fontSize: '.875rem',
       fontWeight: 600,
       color: palette.common.black,
@@ -114,15 +83,6 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         backgroundSize: '100% .1875rem',
         backgroundPosition: '0 100%',
       },
-    },
-    sectionDivider: {
-      borderTop: `4px solid ${palette.common.white}`,
-      height: '20px',
-      maxWidth: '40px',
-    },
-    productNav: {
-      textAlign: 'center',
-      paddingTop: '20px',
     },
   })
 );

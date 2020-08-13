@@ -289,7 +289,7 @@ export default makeStyles(({ palette, spacing, breakpoints }: Theme) =>
           left: 0,
           right: 0,
           bottom: 0,
-          background: palette.common.black,
+          background: palette.grey[100],
           transform: 'scaleY(0)',
           transformOrigin: '50% 0',
           transitionProperty: 'transform',

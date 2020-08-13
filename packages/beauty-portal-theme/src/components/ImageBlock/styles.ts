@@ -3,7 +3,8 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
   createStyles({
     section: {
-      backgroundColor: palette.tertiary.main,
+      backgroundColor: palette.common.white,
+      marginTop: '-70px',
       paddingTop: 0,
       '&.imageblocktypeb': {
         '& .c-image_wrapper': {
@@ -17,7 +18,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       },
     },
     sectionTitle: {
-      color: palette.common.black,
+      color: palette.common.white,
       marginTop: spacing(1.25),
       marginBottom: spacing(0.625),
       lineHeight: 1.2,
@@ -55,8 +56,8 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       },
     },
     imageWrapper: {
-      marginLeft: -16,
-      marginRight: -16,
+      // marginLeft: -16,
+      // marginRight: -16,
       overflow: 'hidden',
       '& img': {
         transition: 'all 500ms ease 0s !important',
@@ -67,8 +68,8 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     },
     copyText: {
       padding: spacing(2.25),
-      background: palette.common.white,
-      color: palette.common.black,
+      background: palette.primary.main,
+      color: palette.common.white,
       order: 2,
       top: spacing(-2.25),
       position: 'relative',
@@ -88,6 +89,80 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
           fontSize: '1.125rem',
         },
       },
+    },
+    sectionDivider: {
+      borderTop: `4px solid ${palette.common.white}`,
+      height: '20px',
+      maxWidth: '40px',
+    },
+    articleTitle: {
+      letterSpacing: '2px',
+      textTransform: 'uppercase',
+      lineHeight: 0.6,
+      fontSize: '1.75rem',
+      fontWeight: 400,
+      margin: 0,
+      marginBottom: spacing(2),
+      [breakpoints.up('md')]: {
+        fontSize: '2.30rem',
+      },
+    },
+    sliderTitle: {
+      fontSize: '1.375rem',
+      fontWeight: 600,
+      lineHeight: 0.6,
+      letterSpacing: 0,
+      margin: 0,
+      marginBottom: spacing(3),
+      [breakpoints.up('md')]: {
+        fontSize: '1.75rem',
+      },
+    },
+    readStory: {
+      fontSize: '1.2rem',
+      fontWeight: 700,
+      width: 160,
+      height: 50,
+      textAlign: 'right',
+      cursor: 'pointer',
+      borderRadius: '25px',
+      marginTop: spacing(4),
+      border: `solid 2px ${palette.common.white}`,
+      backgroundColor: palette.primary.main,
+      color: palette.common.white,
+      textTransform: 'uppercase',
+      position: 'relative',
+      transform: 'perspective(1px) translateZ(0)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+
+      margin: 'auto',
+      '&:before': {
+        content: '""',
+        position: 'absolute',
+        zIndex: -1,
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: palette.common.white,
+        borderRadius: '25px',
+        transform: 'scaleX(0)',
+        transformOrigin: '0 50%',
+        transitionProperty: 'transform',
+        transitionDuration: '0.3s',
+        transitionTimingFunction: 'ease-out',
+      },
+      '&:hover': {
+        color: palette.primary.main,
+        '&:before': {
+          transform: 'scaleX(1)',
+        },
+      },
+    },
+    alignLink: {
+      float: 'right',
     },
   })
 );

@@ -5,10 +5,10 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     section: {
       paddingBottom: spacing(2),
       paddingTop: spacing(2),
-      backgroundColor: palette.quaternary.main,
+      backgroundColor: palette.background.default,
       [breakpoints.up('md')]: {
-        paddingBottom: spacing(5),
-        paddingTop: spacing(5),
+        paddingBottom: spacing(3),
+        paddingTop: spacing(3),
       },
       '& h1': {
         fontSize: '1.875rem',
@@ -24,26 +24,35 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         backgroundColor: palette.common.white,
         '& p': {
           width: '80%',
-          margin: 'auto',
         },
       },
     },
     sectionDescription: {
-      textAlign: 'center',
-      margin: 'auto',
+      textAlign: 'left',
+      margin: '32px',
       color: palette.grey[50],
       '& p': {
         fontSize: '.875rem',
-        margin: 0,
+        lineHeight: '2.5rem',
         [breakpoints.up('md')]: {
           fontSize: '1.125rem',
+          margin: 0,
         },
       },
       '& h1, & h2, & h3, & h4, & h5, & h6': {
-        color: palette.common.black,
+        color: palette.primary.main,
       },
       '& h2': {
-        fontSize: '1.5rem',
+        fontSize: '1.375rem',
+        fontWeight: 600,
+        lineHeight: 0.6,
+        letterSpacing: 0,
+        margin: 0,
+        paddingBottom: '10px',
+        marginBottom: spacing(1),
+        [breakpoints.up('md')]: {
+          fontSize: '1.75rem',
+        },
       },
       '& blockquote': {
         position: 'relative',
@@ -59,7 +68,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
           '& span': {
             '&:last-child': {
               fontSize: '1rem',
-              color: palette.common.black,
+              color: palette.grey[50],
             },
           },
         },
@@ -72,7 +81,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
           backgroundRepeat: 'no-repeat',
           backgroundSize: '30px 30px',
           backgroundPosition: 'center center',
-          backgroundColor: palette.quaternary.main,
+          backgroundColor: palette.common.white,
           height: 40,
           width: 40,
           transform: 'translateX(-50%)',
@@ -90,6 +99,54 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
           zIndex: 0,
         },
       },
+    },
+    alignLink: {
+      textAlign: 'center',
+      marginTop: '10px',
+    },
+    jumpIn: {
+      fontSize: '1.2rem',
+      fontWeight: 700,
+      width: 160,
+      height: 50,
+      cursor: 'pointer',
+      borderRadius: '25px',
+      backgroundColor: palette.primary.main,
+      color: palette.common.white,
+      textTransform: 'uppercase',
+      position: 'relative',
+      transform: 'perspective(1px) translateZ(0)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+
+      margin: 'auto',
+      '&:before': {
+        content: '""',
+        position: 'absolute',
+        zIndex: -1,
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: palette.grey[100],
+        borderRadius: '25px',
+        transform: 'scaleX(0)',
+        transformOrigin: '0 50%',
+        transitionProperty: 'transform',
+        transitionDuration: '0.3s',
+        transitionTimingFunction: 'ease-out',
+      },
+      '&:hover': {
+        color: palette.common.white,
+        '&:before': {
+          transform: 'scaleX(1)',
+        },
+      },
+    },
+    textSocialMenu: {
+      marginRight: '20px',
+      marginLeft: '-100px',
     },
   })
 );

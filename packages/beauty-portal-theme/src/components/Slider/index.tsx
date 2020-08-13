@@ -60,9 +60,6 @@ const Slider: FunctionComponent<SliderInterface> = ({
     return (
       <SwiperSlide key={slide.headline}>
         <div>
-          {slide._type && (
-            <span className={classes.tileSlideType}>{slide._type}</span>
-          )}
           <Link className={classes.sliderLink} to={slide.path}>
             <div className={classes.heroImage}>
               <figure>
@@ -106,6 +103,7 @@ const Slider: FunctionComponent<SliderInterface> = ({
                   </picture>
                 ) : null}
               </figure>
+              {slide.A}
               {slide.heroVideo && (
                 <span className={`icon ${classes.iconPlay}`}>
                   <PlayVideo />
@@ -113,9 +111,11 @@ const Slider: FunctionComponent<SliderInterface> = ({
                 </span>
               )}
             </div>
-            <h3 className={classes.sliderItemCaption}>
-              <span>{slide.headline}</span>
-            </h3>
+            <div className={classes.tileCard}>
+              <h3 className={classes.sliderItemCaption}>
+                <span>{slide.headline}</span>
+              </h3>
+            </div>
           </Link>
         </div>
       </SwiperSlide>
@@ -173,9 +173,19 @@ const Slider: FunctionComponent<SliderInterface> = ({
                 ) : null}
               </figure>
             </div>
-            <h3 className={classes.sliderItemCaption}>
+            <h4
+              className={classNames(classes.sliderItemCaption, classes.white)}
+            >
+              <span>{slide.tagLine}</span>
+            </h4>
+            <h5
+              className={classNames(classes.sliderItemCaption, classes.white)}
+            >
               <span>{slide.name}</span>
-            </h3>
+            </h5>
+            {/* <p className={`${classes.sliderItemCaption} ${classes.white}`}>
+              <span>{slide.tags}</span>
+            </p> */}
           </Link>
         </div>
       </SwiperSlide>
@@ -243,7 +253,12 @@ const Slider: FunctionComponent<SliderInterface> = ({
         data-inview={inView}
       >
         <button
-          className={classNames(classes.navigationButton, classes.nextButton)}
+          className={classNames(
+            classes.navigationButton,
+            classes.nextButton,
+            classes.white
+          )}
+          style={{ paddingLeft: '8px', paddingTop: '5px' }}
           type="button"
           onClick={swiperNext}
           disabled={isLastSlide}
@@ -272,7 +287,12 @@ const Slider: FunctionComponent<SliderInterface> = ({
           })}
         </Swiper>
         <button
-          className={classNames(classes.navigationButton, classes.prevButton)}
+          className={classNames(
+            classes.navigationButton,
+            classes.prevButton,
+            classes.white
+          )}
+          style={{ paddingRight: '6px', paddingTop: '5px' }}
           type="button"
           onClick={swiperPrev}
           disabled={isFirstSlide}
