@@ -37,6 +37,7 @@ const BackToTop: FunctionComponent = () => {
       onClick={handleClick}
     >
       <ArrowUp />
+      <div style={{ marginLeft: '10px' }}>Back to top</div>
       <span className="srOnly">Top</span>
     </a>
   );
