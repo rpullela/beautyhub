@@ -3,7 +3,7 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
   createStyles({
     footer: {
-      background: palette.common.black,
+      background: palette.grey[50],
       transition: 'color 0.25s ease-out 0s',
       fontSize: '.775rem',
       display: 'flex',
@@ -49,6 +49,9 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       lineHeight: 1.6,
       [breakpoints.up('md')]: {
         fontSize: '1.125rem',
+      },
+      '&:hover': {
+        color: palette.primary.main
       },
       '& svg': {
         marginLeft: spacing(0.5),
