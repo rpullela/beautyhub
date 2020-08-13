@@ -3,7 +3,8 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
   createStyles({
     section: {
-      backgroundColor: palette.tertiary.main,
+      backgroundColor: palette.common.white,
+      marginTop: '-40px',
       paddingTop: 0,
       '&.imageblocktypeb': {
         '& .c-image_wrapper': {
@@ -17,7 +18,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       },
     },
     sectionTitle: {
-      color: palette.common.black,
+      color: palette.common.white,
       marginTop: spacing(1.25),
       marginBottom: spacing(0.625),
       lineHeight: 1.2,
@@ -67,8 +68,8 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
     },
     copyText: {
       padding: spacing(2.25),
-      background: palette.common.white,
-      color: palette.common.black,
+      background: palette.primary.main,
+      color: palette.common.white,
       order: 2,
       top: spacing(-2.25),
       position: 'relative',
