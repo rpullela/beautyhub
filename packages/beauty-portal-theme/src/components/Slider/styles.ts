@@ -84,7 +84,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       marginBottom: spacing(1),
       textTransform: 'uppercase',
       letterSpacing: 2,
-      color: palette.quinary.main,
+      color: palette.primary.main,
       fontSize: '.75rem',
       fontWeight: 700,
     },
