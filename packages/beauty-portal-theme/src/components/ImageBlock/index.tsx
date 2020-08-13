@@ -76,28 +76,29 @@ const ImageBlock: FunctionComponent<ImageBlockInterface> = ({
       )}
     >
       <div className="container">
-        <Link to={url || '/'} className={classes.link}>
-          <div className={classes.content}>
-            <div
-              className={classNames('c-image_wrapper', classes.imageWrapper)}
-            >
-              {Image}
-            </div>
-            <div className={classNames('c-image_text', classes.copyText)}>
-              <div className={classes.sectionDivider}></div>
-              <div className={classes.sliderTitle}>Get Moving</div>
-              <h2 className={classes.articleTitle}>
-                <span>{name}</span>
-              </h2>
-              {_rawTextBlockBody && (
-                <BlockContent
-                  serializers={blockTypeDefaultSerializers}
-                  blocks={_rawTextBlockBody}
-                />
-              )}
+        <div className={classes.content}>
+          <div className={classNames('c-image_wrapper', classes.imageWrapper)}>
+            {Image}
+          </div>
+          <div className={classNames('c-image_text', classes.copyText)}>
+            <div className={classes.sectionDivider}></div>
+            <div className={classes.sliderTitle}>Get Moving</div>
+            <h2 className={classes.articleTitle}>
+              <span>{name}</span>
+            </h2>
+            {_rawTextBlockBody && (
+              <BlockContent
+                serializers={blockTypeDefaultSerializers}
+                blocks={_rawTextBlockBody}
+              />
+            )}
+            <div className={classes.alignLink}>
+              <Link to={url || '/'} className={classes.readStory}>
+                Read Story
+              </Link>
             </div>
           </div>
-        </Link>
+        </div>
       </div>
     </section>
   );
