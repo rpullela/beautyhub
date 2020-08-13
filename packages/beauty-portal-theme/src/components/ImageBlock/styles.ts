@@ -4,7 +4,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
   createStyles({
     section: {
       backgroundColor: palette.common.white,
-      marginTop: '-40px',
+      marginTop: '-70px',
       paddingTop: 0,
       '&.imageblocktypeb': {
         '& .c-image_wrapper': {
@@ -56,8 +56,8 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       },
     },
     imageWrapper: {
-      marginLeft: -16,
-      marginRight: -16,
+      // marginLeft: -16,
+      // marginRight: -16,
       overflow: 'hidden',
       '& img': {
         transition: 'all 500ms ease 0s !important',
@@ -88,6 +88,34 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         [breakpoints.up('md')]: {
           fontSize: '1.125rem',
         },
+      },
+    },
+    sectionDivider: {
+      borderTop: `4px solid ${palette.common.white}`,
+      height: '20px',
+      maxWidth: '40px',
+    },
+    articleTitle: {
+      letterSpacing: '2px',
+      textTransform: 'uppercase',
+      lineHeight: 0.6,
+      fontSize: '1.75rem',
+      fontWeight: 400,
+      margin: 0,
+      marginBottom: spacing(2),
+      [breakpoints.up('md')]: {
+        fontSize: '2.30rem',
+      },
+    },
+    sliderTitle: {
+      fontSize: '1.375rem',
+      fontWeight: 600,
+      lineHeight: 0.6,
+      letterSpacing: 0,
+      margin: 0,
+      marginBottom: spacing(3),
+      [breakpoints.up('md')]: {
+        fontSize: '1.75rem',
       },
     },
   })

@@ -84,7 +84,9 @@ const ImageBlock: FunctionComponent<ImageBlockInterface> = ({
               {Image}
             </div>
             <div className={classNames('c-image_text', classes.copyText)}>
-              <h2 className={classes.sectionTitle}>
+              <div className={classes.sectionDivider}></div>
+              <div className={classes.sliderTitle}>Get Moving</div>
+              <h2 className={classes.articleTitle}>
                 <span>{name}</span>
               </h2>
               {_rawTextBlockBody && (
