@@ -258,11 +258,6 @@ export default () =>
                         .icon(FaSlidersH)
                         .schemaType('sliderType')
                         .child(S.documentTypeList('sliderType').title('Slider Type')),
-                      // S.listItem()
-                      //   .title('Wall Type')
-                      //   .icon(FaSlidersH)
-                      //   .schemaType('wallType')
-                      //   .child(S.documentTypeList('wallType').title('Wall Type')),
                       S.listItem()
                         .title('Text Block Type')
                         .icon(MdTextFields)

@@ -11,5 +11,22 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         paddingBottom: spacing(5),
       },
     },
+    svg: {
+      display: 'inline-block',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+    },
+    waveContainer: {
+      display: 'inline-block',
+      position: 'relative',
+      width: '100%',
+      paddingBottom: '100%',
+      verticalAlign: 'middle',
+      overflow: 'hidden',
+    },
+    waveHeight: {
+      height: '100px',
+    },
   })
 );
