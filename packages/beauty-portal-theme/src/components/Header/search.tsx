@@ -10,6 +10,7 @@ const SiteSearch: FunctionComponent = () => {
     <div className={classes.siteSearch}>
       <Link to="/search-results" className={classes.searchButton}>
         <Search />
+        <span className={classes.searchLabel}>Search</span>
         <span className="srOnly">Search</span>
       </Link>
     </div>

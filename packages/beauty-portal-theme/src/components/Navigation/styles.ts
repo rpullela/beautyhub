@@ -41,7 +41,9 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       height: '1.5rem',
       transition: '1s ease-in-out',
       cursor: 'pointer',
-      position: 'relative',
+      position: 'absolute',
+      left: 20,
+      top: '40%'
     },
     NavigationToggleButtonIconBar: {
       transition: '.3s ease-in-out',
@@ -86,7 +88,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       left: 0,
       right: 0,
       bottom: 0,
-      background: palette.common.black,
+      background: palette.grey[50],
       zIndex: 1,
       height: '0.1%',
       transition: 'height .3s ease-in-out',
@@ -196,7 +198,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         left: 0,
         overflow: 'auto',
         height: '0.1%',
-        background: palette.common.black,
+        background: palette.grey[50],
         minWidth: '200px',
         '&:focus-within': {
           height: 'auto',
@@ -222,7 +224,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       position: 'relative',
       display: 'block',
       '&:hover': {
-        backgroundColor: palette.grey[50],
+        backgroundColor: palette.grey[100],
       },
     },
   })
