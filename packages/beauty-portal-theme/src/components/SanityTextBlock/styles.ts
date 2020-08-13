@@ -112,7 +112,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       cursor: 'pointer',
       borderRadius: '25px',
       backgroundColor: palette.primary.main,
-      color: palette.common.black,
+      color: palette.common.white,
       textTransform: 'uppercase',
       position: 'relative',
       transform: 'perspective(1px) translateZ(0)',
@@ -129,7 +129,7 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         left: 0,
         right: 0,
         bottom: 0,
-        background: palette.common.black,
+        background: palette.grey[100],
         borderRadius: '25px',
         transform: 'scaleX(0)',
         transformOrigin: '0 50%',
@@ -143,6 +143,10 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
           transform: 'scaleX(1)',
         },
       },
+    },
+    textSocialMenu: {
+      marginRight: '20px',
+      marginLeft: '-100px',
     },
   })
 );
