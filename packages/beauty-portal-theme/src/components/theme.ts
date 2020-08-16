@@ -5,7 +5,8 @@ import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 const breakpoints = createBreakpoints({});
 
 const color = {
-  primary: '#4287f5',
+  // primary: '#4287f5', // Rexona Blue
+  primary: '#ff3c3c', // Rexona Red
   secondary: '#f8e6de',
   tertiary: '#fed760',
   quaternary: '#b8f0c0',
