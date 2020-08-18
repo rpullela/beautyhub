@@ -108,12 +108,6 @@ export default () =>
                 .child(S.documentTypeList('productSlider').title('Slider for products')),
               S.divider(),
               S.listItem()
-                .title('Wall - Articles')
-                .icon(FaSlidersH)
-                .schemaType('articleWall')
-                .child(S.documentTypeList('articleWall').title('Wall for articles')),
-              S.divider(),
-              S.listItem()
                 .title('Text Block')
                 .icon(MdTextFields)
                 .schemaType('textBlock')
@@ -149,7 +143,13 @@ export default () =>
                 .title('Newsletter Block')
                 .icon(MdEmail)
                 .schemaType('newsletterBlock')
-                .child(S.documentTypeList('newsletterBlock').title('Newsletter Block'))
+                .child(S.documentTypeList('newsletterBlock').title('Newsletter Block')),
+              S.divider(),
+              S.listItem()
+                .title('Social Menu Block')
+                .icon(MdEmail)
+                .schemaType('socialMenuBlock')
+                .child(S.documentTypeList('socialMenuBlock').title('Social Menu Block'))
             ])
         ),
       S.listItem()
@@ -333,7 +333,6 @@ export default () =>
             'brand',
             'product',
             'sliderType',
-            // 'wallType',
             'articleSlider',
             'productSlider',
             'tool',

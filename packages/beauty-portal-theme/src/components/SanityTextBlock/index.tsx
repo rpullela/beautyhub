@@ -14,17 +14,6 @@ const SanityTextBlock: FunctionComponent<SanityTextBlockInterface> = ({
   _rawTextBlockBody,
   textBlockType,
 }) => {
-  const data = useStaticQuery(graphql`
-    query socialMenu {
-      brandInfo: sanityBrandInfo {
-        pinteresturl
-        twitterurl
-        youtubeurl
-        facebookurl
-        instaurl
-      }
-    }
-  `);
   const classes = useStyles({ icon: quote });
   const getComponentvariant = type => {
     return type
@@ -40,11 +29,6 @@ const SanityTextBlock: FunctionComponent<SanityTextBlockInterface> = ({
       )}
     >
       <div className={classNames('container', 'pad0')}>
-        <div>
-          <div>
-            <SocialMenu links={data.brandInfo} />
-          </div>
-        </div>
         <div className={classes.sectionDescription}>
           <BlockContent
             serializers={blockTypeDefaultSerializers}

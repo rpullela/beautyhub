@@ -1,0 +1,26 @@
+.social-menu-section {
+  height: 56px;
+}
+
+.social-menu-icons {
+  float: right;
+}
+
+.social-menu-text {
+  float: left;
+  margin-right: 15px;
+}
+
+.social-menu-container {
+  float: right;
+}
+
+.social-menu-p0 {
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .social-menu-p0 {
+    padding-right: 10px;
+  }
+}

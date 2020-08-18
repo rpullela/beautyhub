@@ -12,7 +12,6 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         display: 'flex',
         margin: 0,
         padding: 0,
-        float: 'right',
       },
 
       '& li': {
@@ -27,9 +26,9 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       },
 
       '& svg': {
-        width: 22,
-        height: 22,
-        fill: palette.grey[100],
+        width: 32,
+        height: 32,
+        fill: palette.grey[200],
         transition: 'all .3s',
       },
     },

@@ -36,12 +36,12 @@ export default {
           type: 'reference',
           to: [
             { type: 'articleSlider' },
-            { type: 'articleWall' },
             { type: 'productSlider' },
             { type: 'textBlock' },
             { type: 'imageBlock' },
             { type: 'videoBlock' },
-            { type: 'newsletterBlock' }
+            { type: 'newsletterBlock' },
+            { type: 'socialMenuBlock' }
           ]
         }
       ]

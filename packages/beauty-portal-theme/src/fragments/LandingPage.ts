@@ -11,114 +11,10 @@ export const query = graphql`
     headline
     _rawIntroduction(resolveReferences: { maxDepth: 10 })
     landingSections {
-      ... on SanityArticleWall {
-        id
-        name
-        headline
-        _rawTextBlockBody(resolveReferences: { maxDepth: 10 })
-        searchCtaLabel
-        searchTags {
-          name
-          tagCategory {
-            name
-          }
-        }
-        slides {
-          ... on SanityFeatureArticle {
-            _type
-            id
-            headline
-            subheading
-            _rawHeroImage(resolveReferences: { maxDepth: 10 })
-            heroImage {
-              asset {
-                url
-                fluid(maxWidth: 752, maxHeight: 421) {
-                  aspectRatio
-                  base64
-                  sizes
-                  src
-                  srcSet
-                  srcSetWebp
-                  srcWebp
-                }
-              }
-              alt
-            }
-            heroVideo {
-              url
-              youTubeCaption
-            }
-            path
-            slug {
-              current
-            }
-          }
-          ... on SanityGalleryArticle {
-            _type
-            id
-            headline
-            _rawHeroImage(resolveReferences: { maxDepth: 10 })
-            heroImage {
-              asset {
-                url
-                fluid(maxWidth: 752, maxHeight: 421) {
-                  aspectRatio
-                  base64
-                  sizes
-                  src
-                  srcSet
-                  srcSetWebp
-                  srcWebp
-                }
-              }
-              alt
-            }
-            path
-            slug {
-              current
-            }
-          }
-          ... on SanityHowToArticle {
-            _type
-            id
-            headline
-            _rawHeroImage(resolveReferences: { maxDepth: 10 })
-            heroImage {
-              asset {
-                url
-                fluid(maxWidth: 752, maxHeight: 421) {
-                  aspectRatio
-                  base64
-                  sizes
-                  src
-                  srcSet
-                  srcSetWebp
-                  srcWebp
-                }
-              }
-              alt
-            }
-            heroVideo {
-              url
-              youTubeCaption
-            }
-            path
-            slug {
-              current
-            }
-          }
-        }
-        slideType {
-          description
-          name
-        }
-      }
       ... on SanityArticleSlider {
         id
         name
         headline
-        _rawTextBlockBody(resolveReferences: { maxDepth: 10 })
         searchCtaLabel
         searchTags {
           name
@@ -136,15 +32,6 @@ export const query = graphql`
             heroImage {
               asset {
                 url
-                fluid(maxWidth: 752, maxHeight: 421) {
-                  aspectRatio
-                  base64
-                  sizes
-                  src
-                  srcSet
-                  srcSetWebp
-                  srcWebp
-                }
               }
               alt
             }
@@ -165,15 +52,6 @@ export const query = graphql`
             heroImage {
               asset {
                 url
-                fluid(maxWidth: 752, maxHeight: 421) {
-                  aspectRatio
-                  base64
-                  sizes
-                  src
-                  srcSet
-                  srcSetWebp
-                  srcWebp
-                }
               }
               alt
             }
@@ -190,15 +68,6 @@ export const query = graphql`
             heroImage {
               asset {
                 url
-                fluid(maxWidth: 752, maxHeight: 421) {
-                  aspectRatio
-                  base64
-                  sizes
-                  src
-                  srcSet
-                  srcSetWebp
-                  srcWebp
-                }
               }
               alt
             }
@@ -223,21 +92,8 @@ export const query = graphql`
         ctaLabel
         headline
         _rawBody(resolveReferences: { maxDepth: 10 })
+        _rawImage(resolveReferences: { maxDepth: 10 })
         campaignID
-        image {
-          asset {
-            fluid {
-              aspectRatio
-              base64
-              sizes
-              src
-              srcSet
-              srcSetWebp
-              srcWebp
-            }
-          }
-          alt
-        }
         type {
           name
           description
@@ -304,25 +160,15 @@ export const query = graphql`
         id
         name
         _rawImage(resolveReferences: { maxDepth: 10 })
-        image {
-          asset {
-            fluid {
-              aspectRatio
-              base64
-              sizes
-              src
-              srcSet
-              srcSetWebp
-              srcWebp
-            }
-          }
-          alt
-        }
         _rawTextBlockBody(resolveReferences: { maxDepth: 10 })
         url
         imageBlockType {
           name
         }
+      }
+      ... on SanitySocialMenuBlock {
+        id
+        name
       }
     }
   }

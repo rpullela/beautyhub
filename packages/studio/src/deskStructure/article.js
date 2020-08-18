@@ -1,13 +1,10 @@
 import S from '@sanity/desk-tool/structure-builder'
-  import { FaNewspaper} from 'react-icons/fa'
-import AllSeoPreviews from '../previews/AllSeoPreviews';
+import { FaNewspaper } from 'react-icons/fa'
+import AllSeoPreviews from '../previews/AllSeoPreviews'
 
-
-
-
-  const getArticlePreviews = (type) =>
+const getArticlePreviews = type =>
   S.documentTypeListItem(type).child(
-    S.documentTypeList(type).child((docId) =>
+    S.documentTypeList(type).child(docId =>
       S.document()
         .id(docId)
         .schemaType(type)
@@ -16,12 +13,12 @@ import AllSeoPreviews from '../previews/AllSeoPreviews';
           S.view
             .component(AllSeoPreviews)
             .title('SEO Preview')
-            .id('seo-preview'),
+            .id('seo-preview')
         ])
     )
-  );
+  )
 
-  export default S.listItem()
+export default S.listItem()
   .title('Articles')
   .icon(FaNewspaper)
   .child(
@@ -30,7 +27,6 @@ import AllSeoPreviews from '../previews/AllSeoPreviews';
       .items([
         getArticlePreviews('featureArticle').title('Feature'),
         getArticlePreviews('galleryArticle').title('Gallery'),
-        getArticlePreviews('howToArticle').title('How To'),
+        getArticlePreviews('howToArticle').title('How To')
       ])
-  );
-
+  )

@@ -34,12 +34,10 @@ import beforeAfterImageBlockType from './documents/beforeAfterImageBlockType'
 import newsletterBlock from './documents/newsletterBlock'
 import newsletterBlockType from './documents/newsletterBlockType'
 import sliderType from './documents/sliderType'
-
-// import wallType from '.documents/wallType'
 import articleSlider from './documents/articleSlider'
-import articleWall from './documents/articleWall'
 import productSlider from './documents/productSlider'
 import navBar from './documents/navBar'
+import socialMenuBlock from './documents/socialMenuBlock'
 
 // Object types
 import navLink from './objects/navLink'
@@ -74,7 +72,6 @@ export default createSchema({
 
     // Documents
     articleSlider,
-    articleWall,
     config,
     brand,
     brandInfo,
@@ -90,8 +87,6 @@ export default createSchema({
     product,
     productSlider,
     sliderType,
-
-    // wallType,
     imageBlockType,
     imageBlock,
     textBlockType,
@@ -107,7 +102,7 @@ export default createSchema({
     textBlock,
     tool,
     author,
-
+    socialMenuBlock,
     navLink,
     navItem,
     navBar,
