@@ -4,17 +4,15 @@ import SanityArticleSlider from '../SanityArticleSlider';
 import SanityProductSlider from '../SanityProductSlider';
 import SanityTextBlock from '../SanityTextBlock';
 import NewsletterBlock from '../NewsletterBlock';
-import SanityVideoBlock from '../SanityVideoBlock';
-import ArticleWall from '../ArticleWall';
+import VideoBlock from '../VideoBlock';
 import ImageBlock from '../ImageBlock';
 
 const componentsMap = {
   SanityArticleSlider: SanityArticleSlider,
-  SanityArticleWall: ArticleWall,
   SanityProductSlider: SanityProductSlider,
   SanityTextBlock: SanityTextBlock,
   SanityNewsletterBlock: NewsletterBlock,
-  SanityVideoBlock: SanityVideoBlock,
+  SanityVideoBlock: VideoBlock,
   SanityImageBlock: ImageBlock,
 };
 

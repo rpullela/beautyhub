@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from 'react';
 import BlockContent from '@sanity/block-content-to-react';
-import { SanityVideoBlockInterface } from './models';
+import { VideoFeaturedBlockInterface } from './models';
 import { blockTypeDefaultSerializers } from '../../helpers/sanity';
 import { getYouTubeId } from '../../helpers/youtube';
 import useStyles from './styles';
 
-const SanityVideoBlock: FunctionComponent<SanityVideoBlockInterface> = ({
+const VideoFeaturedBlock: FunctionComponent<VideoFeaturedBlockInterface> = ({
   name,
   videoBlock,
   _rawTextBlockBody,
@@ -41,4 +41,4 @@ const SanityVideoBlock: FunctionComponent<SanityVideoBlockInterface> = ({
   );
 };
 
-export default SanityVideoBlock;
+export default VideoFeaturedBlock;

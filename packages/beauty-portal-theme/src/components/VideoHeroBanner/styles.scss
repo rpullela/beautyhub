@@ -1,0 +1,50 @@
+.bp-videoBlock {
+  padding-top: 0;
+  padding-bottom: 16px;
+
+  @media (min-width: 768px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    & iframe {
+      @media (min-width: 768px) {
+        order: 2;
+        height: 380px;
+      }
+    }
+  }
+
+  &_name {
+    @media (min-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &_copy {
+    padding: 18px;
+    background: white;
+    order: 2;
+
+    @media (min-width: 768px) {
+      order: 1;
+      align-self: center;
+      padding: 24px;
+      position: relative;
+      right: -20px;
+    }
+
+    & p {
+      margin: 0;
+      font-size: 1.125rem;
+    }
+  }
+}
