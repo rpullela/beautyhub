@@ -25,9 +25,8 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
         backgroundColor: palette.grey[20],
       },
       '& h4': {
-        letterSpacing: '2px',
+        letterSpacing: '1px',
         textTransform: 'uppercase',
-        lineHeight: 0.6,
         fontSize: '1.75rem',
         fontWeight: 400,
         margin: 0,

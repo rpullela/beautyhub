@@ -13,7 +13,10 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
           },
         },
         '& .c-image_text': {
-          right: 10,
+          right: 0,
+          [breakpoints.up('md')]: {
+            right: 10,
+          },
         },
       },
     },
@@ -96,9 +99,8 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       maxWidth: '40px',
     },
     articleTitle: {
-      letterSpacing: '2px',
+      letterSpacing: '1px',
       textTransform: 'uppercase',
-      lineHeight: 0.6,
       fontSize: '1.75rem',
       fontWeight: 400,
       margin: 0,

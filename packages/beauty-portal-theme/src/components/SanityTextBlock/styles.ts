@@ -33,9 +33,10 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       color: palette.grey[50],
       '& p': {
         fontSize: '.875rem',
-        lineHeight: '2.5rem',
+        lineHeight: '1.5rem',
         [breakpoints.up('md')]: {
           fontSize: '1.125rem',
+          lineHeight: '2.5rem',
           margin: 0,
         },
       },
@@ -45,7 +46,6 @@ export default makeStyles(({ breakpoints, palette, spacing }: Theme) =>
       '& h2': {
         fontSize: '1.375rem',
         fontWeight: 600,
-        lineHeight: 0.6,
         letterSpacing: 0,
         margin: 0,
         paddingBottom: '10px',
