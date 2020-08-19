@@ -15,6 +15,7 @@ const Header: FunctionComponent = () => {
         youtubeurl
         facebookurl
         instaurl
+        spotifyurl
       }
     }
   `);

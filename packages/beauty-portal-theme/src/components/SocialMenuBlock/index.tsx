@@ -14,6 +14,7 @@ const SocialMenuBlock: FunctionComponent<SocialMenuBlockInterface> = ({}) => {
         youtubeurl
         facebookurl
         instaurl
+        spotifyurl
       }
     }
   `);

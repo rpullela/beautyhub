@@ -24,6 +24,7 @@ const Footer: FunctionComponent = () => {
         youtubeurl
         facebookurl
         instaurl
+        spotifyurl
       }
     }
   `);

@@ -130,6 +130,7 @@ export const query = graphql`
       youtubeurl
       facebookurl
       instaurl
+      spotifyurl
     }
 
     sectionTitles: sanityHowToTemplate {

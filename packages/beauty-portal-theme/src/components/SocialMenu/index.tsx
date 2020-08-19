@@ -5,6 +5,7 @@ import { ReactComponent as Pinterest } from '../../images/icons/pinterest.svg';
 import { ReactComponent as Youtube } from '../../images/icons/youtube.svg';
 import { ReactComponent as Facebook } from '../../images/icons/facebook.svg';
 import { ReactComponent as Share } from '../../images/icons/facebook.svg';
+import { ReactComponent as Spotify } from '../../images/icons/spotify.svg';
 import './styles.scss';
 
 const SocialMenu: FunctionComponent<SocialMenuInterface> = ({ links }) => {
@@ -14,6 +15,7 @@ const SocialMenu: FunctionComponent<SocialMenuInterface> = ({ links }) => {
     twitter: Twitter,
     pinterest: Pinterest,
     youtube: Youtube,
+    spotify: Spotify,
     default: Share,
   };
 

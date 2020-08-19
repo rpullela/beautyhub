@@ -39,6 +39,7 @@ const PageScheme = ({
           pinteresturl
           facebookurl
           instaurl
+          spotifyurl
           domainurl
           brandLogoURL
           brandImageURL
@@ -57,6 +58,7 @@ const PageScheme = ({
   brandInfo.pinteresturl && brandInfo.sameAs.push(brandInfo.pinteresturl);
   brandInfo.facebookurl && brandInfo.sameAs.push(brandInfo.facebookurl);
   brandInfo.instaurl && brandInfo.sameAs.push(brandInfo.instaurl);
+  brandInfo.spotifyurl && brandInfo.sameAs.push(brandInfo.spotifyurl);
 
   const extractor = extractorsMap[type] || extractorsMap.default;
   const jsonLd = Object.assign(

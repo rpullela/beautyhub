@@ -1,4 +1,4 @@
-import {MdSettings} from 'react-icons/md'
+import { MdSettings } from 'react-icons/md'
 
 export default {
   name: 'brandInfo',
@@ -33,6 +33,15 @@ export default {
     {
       title: 'Pinterest Channel',
       name: 'pinteresturl',
+      type: 'url',
+      validation: Rule =>
+        Rule.uri({
+          scheme: ['http', 'https', 'mailto', 'tel']
+        })
+    },
+    {
+      title: 'Spotify Channel',
+      name: 'spotifyurl',
       type: 'url',
       validation: Rule =>
         Rule.uri({
