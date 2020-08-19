@@ -91,7 +91,7 @@ module.exports = ({ themeConfig }) => {
       resolve: 'gatsby-plugin-algolia',
       options: {
         appId: siteMetadata.algoliaAppID,
-        apiKey: siteMetadata.algoliaAdminApiKey,
+        apiKey: siteMetadata.algoliaApiKey,
         queries,
         enablePartialUpdates: true,
         chunkSize: 10000,
