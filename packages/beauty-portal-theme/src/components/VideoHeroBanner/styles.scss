@@ -1,50 +1,104 @@
-.bp-videoBlock {
-  padding-top: 0;
-  padding-bottom: 16px;
-
-  @media (min-width: 768px) {
-    padding-top: 0;
-    padding-bottom: 0;
+.video-section-style {
+  height: 525px;
+  margin-bottom: 20px;
+  @media (max-width: 1010px) {
+    height: 440px;
   }
-
-  &_content {
-    display: flex;
-    flex-direction: column;
-
-    @media (min-width: 768px) {
-      flex-direction: row;
+}
+.hero-text {
+  pointer-events: none;
+  max-width: 45%;
+  color: white;
+  @media (max-width: 1295px) {
+    padding-left: 10px;
+  }
+  @media (max-width: 1220px) {
+    max-width: 100%;
+    height: 200px;
+  }
+  & h2 {
+    text-transform: uppercase;
+    font-size: 3em;
+    @media (max-width: 1220px) {
+      margin-bottom: 90px;
+      text-align: center;
     }
-
-    & iframe {
-      @media (min-width: 768px) {
-        order: 2;
-        height: 380px;
-      }
+    @media (max-width: 1010px) {
+      margin-bottom: 60px;
+    }
+    @media (max-width: 600px) {
+      font-size: 2.5em;
     }
   }
-
-  &_name {
-    @media (min-width: 768px) {
-      margin-bottom: 20px;
+  & p {
+    @media (max-width: 1220px) {
+      text-align: center;
     }
   }
-
-  &_copy {
-    padding: 18px;
-    background: white;
-    order: 2;
-
-    @media (min-width: 768px) {
-      order: 1;
-      align-self: center;
-      padding: 24px;
-      position: relative;
-      right: -20px;
-    }
-
-    & p {
-      margin: 0;
-      font-size: 1.125rem;
-    }
+}
+.hero-background-img {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 90;
+  width: 100%;
+  height: 560px;
+  background-size: 100% 100%;
+  @media (max-width: 1010px) {
+    height: 440px;
+  }
+}
+.iframe-style {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 90;
+  width: 100%;
+  height: 560px;
+  border: none;
+  object-fit: fill;
+  @media (max-width: 1010px) {
+    height: 440px;
+  }
+}
+.text-container {
+  position: absolute;
+  height: 280px;
+  margin-top: 135px;
+  z-index: 1;
+  @media (max-width: 1010px) {
+    margin-top: 50px;
+  }
+}
+.alignLink {
+  text-align: center;
+  margin-top: 60px;
+  @media (max-width: 1010px) {
+    margin-top: 30px;
+  }
+  @media (max-width: 470px) {
+    margin-top: 30px;
+  }
+}
+.cta {
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 25px;
+  background-color: #4287f5;
+  color: white;
+  text-transform: uppercase;
+  padding: 9px 30px;
+  align-items: center;
+  justify-content: center;
+  transform: perspective(1px) translateZ(0);
+  background-size: 200% 100%;
+  transition: all 0.3s ease-out;
+  margin: auto;
+  &:hover {
+    background-color: #999;
+    color: white;
+    background-position: left bottom;
   }
 }

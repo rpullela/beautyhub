@@ -297,8 +297,16 @@ export const query = graphql`
           _type
           url
           youTubeCaption
+          heroImage {
+            asset {
+              url
+            }
+          }
         }
         _type
+        videoBlockType {
+          name
+        }
       }
       ... on SanityImageBlock {
         id

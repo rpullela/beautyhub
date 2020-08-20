@@ -6,7 +6,6 @@ import { getYouTubeId } from '../../helpers/youtube';
 import useStyles from './styles';
 
 const VideoFeaturedBlock: FunctionComponent<VideoFeaturedBlockInterface> = ({
-  name,
   videoBlock,
   _rawTextBlockBody,
 }) => {
@@ -27,7 +26,7 @@ const VideoFeaturedBlock: FunctionComponent<VideoFeaturedBlockInterface> = ({
             allowFullScreen
           ></iframe>
           <div className={classes.copyText}>
-            <h2 className={classes.sectionTitle}>{videoBlock}</h2>
+            <h2 className={classes.sectionTitle}></h2>
             {_rawTextBlockBody && (
               <BlockContent
                 serializers={blockTypeDefaultSerializers}

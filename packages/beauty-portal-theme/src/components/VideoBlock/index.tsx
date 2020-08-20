@@ -7,7 +7,8 @@ import VideoHeroBanner from '../VideoHeroBanner';
 const componentMap = {
   hero: VideoHeroBanner,
   featured: VideoFeaturedBlock,
-  default: VideoHeroBanner,
+  type1: VideoFeaturedBlock,
+  default: VideoFeaturedBlock,
 };
 
 const VideoBlock: FunctionComponent<VideoBlockInterface> = ({
@@ -16,16 +17,15 @@ const VideoBlock: FunctionComponent<VideoBlockInterface> = ({
   _rawTextBlockBody,
   videoBlockType,
 }) => {
-  const getComponentKey = (componentTypeName: string) => {
-    if (componentTypeName.indexOf('hero') >= 0) return 'hero';
-    if (componentTypeName.indexOf('featured') >= 0) return 'featured';
+  const getComponentName = (videoBlockName: string) => {
+    videoBlockName = videoBlockType.name.toLowerCase();
+    if (videoBlockName.indexOf('hero video banner') >= 0) return 'hero';
+    if (videoBlockName.indexOf('featured video') >= 0) return 'featured';
+    if (videoBlockName.indexOf('video block - type 1') >= 0) return 'type1';
 
     return 'default';
   };
-  const componentTypeName = videoBlockType
-    ? videoBlockType.name.toLowerCase()
-    : '';
-  const componentKey = getComponentKey(componentTypeName);
+  const componentKey = getComponentName(videoBlockType);
   const Component = componentMap[componentKey];
 
   return Component ? (
