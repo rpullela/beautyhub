@@ -39,7 +39,7 @@
     "gatsby-source-filesystem": "2.1.48",
     "gatsby-source-sanity": "^5.0.6",
     "gatsby-source-sanity-transform-images": "^0.0.7",
-    "gatsby-transformer-remark": "2.6.50",
+    "gatsby-transformer-remark": "5.25.1",
     "gatsby-transformer-sharp": "2.3.14",
     "jmespath": "^0.15.0",
     "lodash": "^4.17.15",
